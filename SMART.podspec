@@ -24,32 +24,12 @@ Pod::Spec.new do |s|
     s.author       = { "Pascal Pfiffner" => "phase.of.matter@gmail.com" }
   
     s.source            = { :git => "https://github.com/LearningMotors/Swift-SMART.git" }
-    s.prepare_command   = "git submodule update --init --recursive"  # The :submodules flag above is not recursive :P
   
-    s.ios.deployment_target = "11.0"
-    s.osx.deployment_target = "10.13"
+    s.ios.deployment_target = "14.0"
   
     s.pod_target_xcconfig   = { 'OTHER_SWIFT_FLAGS' => '-DNO_MODEL_IMPORT -DNO_MODULE_IMPORT -DNO_KEYCHAIN_IMPORT' }
     s.source_files          = "Sources/Client/*.swift",
-                              "Swift-FHIR/Sources/Models/*.swift",
-                              "Swift-FHIR/Sources/Client/DomainResource+Containment.swift",
-                              "Swift-FHIR/Sources/Client/Element+Extensions.swift",
-                              "Swift-FHIR/Sources/Client/FHIRBaseRequestHandler.swift",
-                              "Swift-FHIR/Sources/Client/FHIRMinimalServer.swift",
-                              "Swift-FHIR/Sources/Client/FHIROpenServer.swift",
-                              "Swift-FHIR/Sources/Client/FHIROperation.swift",
-                              "Swift-FHIR/Sources/Client/FHIRSearch.swift",
-                              "Swift-FHIR/Sources/Client/FHIRServerDataResponse.swift",
-                              "Swift-FHIR/Sources/Client/FHIRString+Localization.swift",
-                              "Swift-FHIR/Sources/Client/Patient+SMART.swift",
-                              "Swift-FHIR/Sources/Client/Reference+Resolving.swift",
-                              "Swift-FHIR/Sources/Client/Resource+Instantiation.swift",
-                              "Swift-FHIR/Sources/Client/Resource+Operation.swift",
-                              "Swift-FHIR/Sources/Client/Resource+REST.swift",
-                              "Swift-FHIR/Sources/Client/ValueSet+Localization.swift",
-                              "OAuth2/SwiftKeychain/Keychain/Keychain.swift",
-                              "OAuth2/Sources/Base/*.swift",
-                              "OAuth2/Sources/Flows/*.swift"
-    s.ios.source_files      = "Sources/iOS/*.swift",
-                              "OAuth2/Sources/iOS/*.swift"
+                              "OAuth2/*.swift",
+                              "FHIR/*.swift"
+    s.ios.source_files      = "Sources/iOS/*.swift"
 end
