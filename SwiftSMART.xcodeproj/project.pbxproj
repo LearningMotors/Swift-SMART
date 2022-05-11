@@ -3,17 +3,270 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32F92AB4282C4A0400F611FE /* CoverageEligibilityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929E1282C49ED00F611FE /* CoverageEligibilityResponse.swift */; };
+		32F92AB5282C4A0400F611FE /* DeviceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929E2282C49ED00F611FE /* DeviceRequest.swift */; };
+		32F92AB6282C4A0400F611FE /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929E3282C49EE00F611FE /* Attachment.swift */; };
+		32F92AB7282C4A0400F611FE /* ChargeItemDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929E4282C49EE00F611FE /* ChargeItemDefinition.swift */; };
+		32F92AB8282C4A0400F611FE /* SampledData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929E5282C49EE00F611FE /* SampledData.swift */; };
+		32F92AB9282C4A0400F611FE /* AllergyIntolerance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929E6282C49EE00F611FE /* AllergyIntolerance.swift */; };
+		32F92ABA282C4A0400F611FE /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929E7282C49EE00F611FE /* Endpoint.swift */; };
+		32F92ABB282C4A0400F611FE /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929E8282C49EE00F611FE /* Invoice.swift */; };
+		32F92ABC282C4A0400F611FE /* TerminologyCapabilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929E9282C49EE00F611FE /* TerminologyCapabilities.swift */; };
+		32F92ABD282C4A0400F611FE /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929EA282C49EE00F611FE /* Measure.swift */; };
+		32F92ABE282C4A0400F611FE /* Communication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929EB282C49EE00F611FE /* Communication.swift */; };
+		32F92ABF282C4A0400F611FE /* MedicationAdministration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929EC282C49EE00F611FE /* MedicationAdministration.swift */; };
+		32F92AC0282C4A0400F611FE /* SubstanceSourceMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929ED282C49EF00F611FE /* SubstanceSourceMaterial.swift */; };
+		32F92AC1282C4A0400F611FE /* MedicinalProductContraindication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929EE282C49EF00F611FE /* MedicinalProductContraindication.swift */; };
+		32F92AC2282C4A0400F611FE /* ContactDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929EF282C49EF00F611FE /* ContactDetail.swift */; };
+		32F92AC3282C4A0400F611FE /* DateAndTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929F0282C49EF00F611FE /* DateAndTime.swift */; };
+		32F92AC4282C4A0400F611FE /* DocumentReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929F1282C49EF00F611FE /* DocumentReference.swift */; };
+		32F92AC5282C4A0400F611FE /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929F2282C49EF00F611FE /* List.swift */; };
+		32F92AC6282C4A0400F611FE /* Evidence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929F3282C49EF00F611FE /* Evidence.swift */; };
+		32F92AC7282C4A0400F611FE /* Practitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929F4282C49EF00F611FE /* Practitioner.swift */; };
+		32F92AC8282C4A0400F611FE /* MedicinalProductManufactured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929F5282C49EF00F611FE /* MedicinalProductManufactured.swift */; };
+		32F92AC9282C4A0400F611FE /* QuestionnaireResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929F6282C49F000F611FE /* QuestionnaireResponse.swift */; };
+		32F92ACA282C4A0400F611FE /* FHIRAbstractBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929F7282C49F000F611FE /* FHIRAbstractBase.swift */; };
+		32F92ACB282C4A0400F611FE /* ExampleScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929F8282C49F000F611FE /* ExampleScenario.swift */; };
+		32F92ACC282C4A0400F611FE /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929F9282C49F000F611FE /* Schedule.swift */; };
+		32F92ACD282C4A0400F611FE /* CareTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929FA282C49F000F611FE /* CareTeam.swift */; };
+		32F92ACE282C4A0400F611FE /* CatalogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929FB282C49F000F611FE /* CatalogEntry.swift */; };
+		32F92ACF282C4A0400F611FE /* Claim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929FC282C49F000F611FE /* Claim.swift */; };
+		32F92AD0282C4A0400F611FE /* MedicinalProductInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929FD282C49F000F611FE /* MedicinalProductInteraction.swift */; };
+		32F92AD1282C4A0400F611FE /* MedicationKnowledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929FE282C49F000F611FE /* MedicationKnowledge.swift */; };
+		32F92AD2282C4A0400F611FE /* SubstanceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F929FF282C49F000F611FE /* SubstanceSpecification.swift */; };
+		32F92AD3282C4A0400F611FE /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A00282C49F100F611FE /* Location.swift */; };
+		32F92AD4282C4A0400F611FE /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A01282C49F100F611FE /* Signature.swift */; };
+		32F92AD5282C4A0400F611FE /* SupplyDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A02282C49F100F611FE /* SupplyDelivery.swift */; };
+		32F92AD6282C4A0400F611FE /* Ratio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A03282C49F100F611FE /* Ratio.swift */; };
+		32F92AD7282C4A0400F611FE /* Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A04282C49F100F611FE /* Distance.swift */; };
+		32F92AD8282C4A0400F611FE /* Dosage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A05282C49F100F611FE /* Dosage.swift */; };
+		32F92AD9282C4A0400F611FE /* ResearchElementDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A06282C49F100F611FE /* ResearchElementDefinition.swift */; };
+		32F92ADA282C4A0400F611FE /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A07282C49F100F611FE /* Parameters.swift */; };
+		32F92ADB282C4A0400F611FE /* StructureDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A08282C49F100F611FE /* StructureDefinition.swift */; };
+		32F92ADC282C4A0400F611FE /* MedicinalProductUndesirableEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A09282C49F200F611FE /* MedicinalProductUndesirableEffect.swift */; };
+		32F92ADD282C4A0400F611FE /* SubstanceReferenceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A0A282C49F200F611FE /* SubstanceReferenceInformation.swift */; };
+		32F92ADE282C4A0400F611FE /* ValueSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A0B282C49F200F611FE /* ValueSet.swift */; };
+		32F92ADF282C4A0400F611FE /* Resource+Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A0C282C49F200F611FE /* Resource+Meta.swift */; };
+		32F92AE0282C4A0400F611FE /* RelatedPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A0D282C49F200F611FE /* RelatedPerson.swift */; };
+		32F92AE1282C4A0400F611FE /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A0E282C49F200F611FE /* Meta.swift */; };
+		32F92AE2282C4A0400F611FE /* Population.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A0F282C49F200F611FE /* Population.swift */; };
+		32F92AE3282C4A0400F611FE /* OperationOutcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A10282C49F200F611FE /* OperationOutcome.swift */; };
+		32F92AE4282C4A0400F611FE /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A11282C49F200F611FE /* Contributor.swift */; };
+		32F92AE5282C4A0400F611FE /* DomainResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A12282C49F200F611FE /* DomainResource.swift */; };
+		32F92AE6282C4A0400F611FE /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A13282C49F300F611FE /* Extension.swift */; };
+		32F92AE7282C4A0400F611FE /* EnrollmentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A14282C49F300F611FE /* EnrollmentResponse.swift */; };
+		32F92AE8282C4A0400F611FE /* Composition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A15282C49F300F611FE /* Composition.swift */; };
+		32F92AE9282C4A0400F611FE /* FHIRValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A16282C49F300F611FE /* FHIRValidationError.swift */; };
+		32F92AEA282C4A0400F611FE /* Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A17282C49F300F611FE /* Binary.swift */; };
+		32F92AEB282C4A0400F611FE /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A18282C49F300F611FE /* Expression.swift */; };
+		32F92AEC282C4A0400F611FE /* CodeSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A19282C49F300F611FE /* CodeSystem.swift */; };
+		32F92AED282C4A0400F611FE /* MedicinalProductAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A1A282C49F300F611FE /* MedicinalProductAuthorization.swift */; };
+		32F92AEE282C4A0400F611FE /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A1B282C49F300F611FE /* Address.swift */; };
+		32F92AEF282C4A0400F611FE /* Substance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A1C282C49F400F611FE /* Substance.swift */; };
+		32F92AF0282C4A0400F611FE /* HumanName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A1D282C49F400F611FE /* HumanName.swift */; };
+		32F92AF1282C4A0400F611FE /* EnrollmentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A1E282C49F400F611FE /* EnrollmentRequest.swift */; };
+		32F92AF2282C4A0400F611FE /* TestReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A1F282C49F400F611FE /* TestReport.swift */; };
+		32F92AF3282C4A0400F611FE /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A20282C49F400F611FE /* Appointment.swift */; };
+		32F92AF4282C4A0400F611FE /* RiskAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A21282C49F400F611FE /* RiskAssessment.swift */; };
+		32F92AF5282C4A0400F611FE /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A22282C49F400F611FE /* Account.swift */; };
+		32F92AF6282C4A0400F611FE /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A23282C49F400F611FE /* Money.swift */; };
+		32F92AF7282C4A0400F611FE /* Age.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A24282C49F400F611FE /* Age.swift */; };
+		32F92AF8282C4A0400F611FE /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A25282C49F500F611FE /* Patient.swift */; };
+		32F92AF9282C4A0400F611FE /* NutritionOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A26282C49F500F611FE /* NutritionOrder.swift */; };
+		32F92AFA282C4A0400F611FE /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A27282C49F500F611FE /* Period.swift */; };
+		32F92AFB282C4A0400F611FE /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A28282C49F500F611FE /* Annotation.swift */; };
+		32F92AFC282C4A0400F611FE /* FHIRPrimitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A29282C49F500F611FE /* FHIRPrimitive.swift */; };
+		32F92AFD282C4A0400F611FE /* UsageContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A2A282C49F500F611FE /* UsageContext.swift */; };
+		32F92AFE282C4A0400F611FE /* MedicinalProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A2B282C49F500F611FE /* MedicinalProduct.swift */; };
+		32F92AFF282C4A0400F611FE /* PaymentNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A2C282C49F500F611FE /* PaymentNotice.swift */; };
+		32F92B00282C4A0400F611FE /* BackboneElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A2D282C49F600F611FE /* BackboneElement.swift */; };
+		32F92B01282C4A0400F611FE /* DocumentManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A2E282C49F600F611FE /* DocumentManifest.swift */; };
+		32F92B02282C4A0400F611FE /* TestScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A2F282C49F600F611FE /* TestScript.swift */; };
+		32F92B03282C4A0400F611FE /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A30282C49F600F611FE /* Flag.swift */; };
+		32F92B04282C4A0400F611FE /* Immunization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A31282C49F600F611FE /* Immunization.swift */; };
+		32F92B05282C4A0400F611FE /* ImplementationGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A32282C49F600F611FE /* ImplementationGuide.swift */; };
+		32F92B06282C4A0400F611FE /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A33282C49F600F611FE /* Group.swift */; };
+		32F92B07282C4A0400F611FE /* VerificationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A34282C49F700F611FE /* VerificationResult.swift */; };
+		32F92B08282C4A0400F611FE /* ClinicalImpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A35282C49F700F611FE /* ClinicalImpression.swift */; };
+		32F92B09282C4A0400F611FE /* AppointmentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A36282C49F700F611FE /* AppointmentResponse.swift */; };
+		32F92B0A282C4A0400F611FE /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A37282C49F700F611FE /* Medication.swift */; };
+		32F92B0B282C4A0400F611FE /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A38282C49F700F611FE /* Task.swift */; };
+		32F92B0C282C4A0400F611FE /* ContactPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A39282C49F700F611FE /* ContactPoint.swift */; };
+		32F92B0D282C4A0400F611FE /* SubstancePolymer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A3A282C49F700F611FE /* SubstancePolymer.swift */; };
+		32F92B0E282C4A0400F611FE /* FHIRRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A3B282C49F700F611FE /* FHIRRequest.swift */; };
+		32F92B0F282C4A0400F611FE /* Questionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A3C282C49F700F611FE /* Questionnaire.swift */; };
+		32F92B10282C4A0400F611FE /* FHIRURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A3D282C49F800F611FE /* FHIRURL.swift */; };
+		32F92B11282C4A0400F611FE /* BiologicallyDerivedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A3E282C49F800F611FE /* BiologicallyDerivedProduct.swift */; };
+		32F92B12282C4A0400F611FE /* EventDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A3F282C49F800F611FE /* EventDefinition.swift */; };
+		32F92B13282C4A0400F611FE /* Consent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A40282C49F800F611FE /* Consent.swift */; };
+		32F92B14282C4A0400F611FE /* FHIRAbstractBase+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A41282C49F800F611FE /* FHIRAbstractBase+Factory.swift */; };
+		32F92B15282C4A0400F611FE /* GuidanceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A42282C49F800F611FE /* GuidanceResponse.swift */; };
+		32F92B16282C4A0400F611FE /* OperationDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A43282C49F800F611FE /* OperationDefinition.swift */; };
+		32F92B17282C4A0400F611FE /* AdverseEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A44282C49F800F611FE /* AdverseEvent.swift */; };
+		32F92B18282C4A0400F611FE /* NamingSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A45282C49F800F611FE /* NamingSystem.swift */; };
+		32F92B19282C4A0400F611FE /* Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A46282C49F800F611FE /* Count.swift */; };
+		32F92B1A282C4A0400F611FE /* SubstanceNucleicAcid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A47282C49F900F611FE /* SubstanceNucleicAcid.swift */; };
+		32F92B1B282C4A0400F611FE /* Quantity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A48282C49F900F611FE /* Quantity.swift */; };
+		32F92B1C282C4A0400F611FE /* CodeableConcept.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A49282C49F900F611FE /* CodeableConcept.swift */; };
+		32F92B1D282C4A0400F611FE /* EvidenceVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A4A282C49F900F611FE /* EvidenceVariable.swift */; };
+		32F92B1E282C4A0400F611FE /* Base64Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A4B282C49F900F611FE /* Base64Binary.swift */; };
+		32F92B1F282C4A0400F611FE /* ProductShelfLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A4C282C49F900F611FE /* ProductShelfLife.swift */; };
+		32F92B20282C4A0400F611FE /* Timing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A4D282C49F900F611FE /* Timing.swift */; };
+		32F92B21282C4A0400F611FE /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A4E282C49F900F611FE /* Condition.swift */; };
+		32F92B22282C4A0400F611FE /* Coverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A4F282C49F900F611FE /* Coverage.swift */; };
+		32F92B23282C4A0400F611FE /* RiskEvidenceSynthesis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A50282C49F900F611FE /* RiskEvidenceSynthesis.swift */; };
+		32F92B24282C4A0400F611FE /* EffectEvidenceSynthesis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A51282C49FA00F611FE /* EffectEvidenceSynthesis.swift */; };
+		32F92B25282C4A0400F611FE /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A52282C49FA00F611FE /* Goal.swift */; };
+		32F92B26282C4A0400F611FE /* MolecularSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A53282C49FA00F611FE /* MolecularSequence.swift */; };
+		32F92B27282C4A0400F611FE /* ResearchStudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A54282C49FA00F611FE /* ResearchStudy.swift */; };
+		32F92B28282C4A0500F611FE /* ResearchDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A55282C49FA00F611FE /* ResearchDefinition.swift */; };
+		32F92B29282C4A0500F611FE /* DeviceMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A56282C49FA00F611FE /* DeviceMetric.swift */; };
+		32F92B2A282C4A0500F611FE /* VisionPrescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A57282C49FA00F611FE /* VisionPrescription.swift */; };
+		32F92B2B282C4A0500F611FE /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A58282C49FA00F611FE /* Duration.swift */; };
+		32F92B2C282C4A0500F611FE /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A59282C49FA00F611FE /* Coding.swift */; };
+		32F92B2D282C4A0500F611FE /* PractitionerRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A5A282C49FB00F611FE /* PractitionerRole.swift */; };
+		32F92B2E282C4A0500F611FE /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A5B282C49FB00F611FE /* Media.swift */; };
+		32F92B2F282C4A0500F611FE /* FamilyMemberHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A5C282C49FB00F611FE /* FamilyMemberHistory.swift */; };
+		32F92B30282C4A0500F611FE /* SubstanceAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A5D282C49FB00F611FE /* SubstanceAmount.swift */; };
+		32F92B31282C4A0500F611FE /* ChargeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A5E282C49FB00F611FE /* ChargeItem.swift */; };
+		32F92B32282C4A0500F611FE /* DetectedIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A5F282C49FB00F611FE /* DetectedIssue.swift */; };
+		32F92B33282C4A0500F611FE /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A60282C49FB00F611FE /* ServiceRequest.swift */; };
+		32F92B34282C4A0500F611FE /* FHIREnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A61282C49FB00F611FE /* FHIREnum.swift */; };
+		32F92B35282C4A0500F611FE /* RequestGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A62282C49FB00F611FE /* RequestGroup.swift */; };
+		32F92B36282C4A0500F611FE /* EpisodeOfCare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A63282C49FB00F611FE /* EpisodeOfCare.swift */; };
+		32F92B37282C4A0500F611FE /* SupplyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A64282C49FC00F611FE /* SupplyRequest.swift */; };
+		32F92B38282C4A0500F611FE /* HealthcareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A65282C49FC00F611FE /* HealthcareService.swift */; };
+		32F92B39282C4A0500F611FE /* MessageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A66282C49FC00F611FE /* MessageHeader.swift */; };
+		32F92B3A282C4A0500F611FE /* SpecimenDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A67282C49FC00F611FE /* SpecimenDefinition.swift */; };
+		32F92B3B282C4A0500F611FE /* BodyStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A68282C49FC00F611FE /* BodyStructure.swift */; };
+		32F92B3C282C4A0500F611FE /* Observation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A69282C49FC00F611FE /* Observation.swift */; };
+		32F92B3D282C4A0500F611FE /* FHIRString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A6A282C49FC00F611FE /* FHIRString.swift */; };
+		32F92B3E282C4A0500F611FE /* ProdCharacteristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A6B282C49FC00F611FE /* ProdCharacteristic.swift */; };
+		32F92B3F282C4A0500F611FE /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A6C282C49FC00F611FE /* Contract.swift */; };
+		32F92B40282C4A0500F611FE /* Encounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A6D282C49FD00F611FE /* Encounter.swift */; };
+		32F92B41282C4A0500F611FE /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A6E282C49FD00F611FE /* Library.swift */; };
+		32F92B42282C4A0500F611FE /* ParameterDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A6F282C49FD00F611FE /* ParameterDefinition.swift */; };
+		32F92B43282C4A0500F611FE /* Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A70282C49FD00F611FE /* Basic.swift */; };
+		32F92B44282C4A0500F611FE /* CodeSystems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A71282C49FD00F611FE /* CodeSystems.swift */; };
+		32F92B45282C4A0500F611FE /* FHIRType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A72282C49FD00F611FE /* FHIRType.swift */; };
+		32F92B46282C4A0500F611FE /* ClaimResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A73282C49FD00F611FE /* ClaimResponse.swift */; };
+		32F92B47282C4A0500F611FE /* Narrative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A74282C49FD00F611FE /* Narrative.swift */; };
+		32F92B48282C4A0500F611FE /* CarePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A75282C49FD00F611FE /* CarePlan.swift */; };
+		32F92B49282C4A0500F611FE /* DeviceUseStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A76282C49FE00F611FE /* DeviceUseStatement.swift */; };
+		32F92B4A282C4A0500F611FE /* ImmunizationEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A77282C49FE00F611FE /* ImmunizationEvaluation.swift */; };
+		32F92B4B282C4A0500F611FE /* FHIRError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A78282C49FE00F611FE /* FHIRError.swift */; };
+		32F92B4C282C4A0500F611FE /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A79282C49FE00F611FE /* Identifier.swift */; };
+		32F92B4D282C4A0500F611FE /* MedicinalProductIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A7A282C49FE00F611FE /* MedicinalProductIngredient.swift */; };
+		32F92B4E282C4A0500F611FE /* Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A7B282C49FE00F611FE /* Reference.swift */; };
+		32F92B4F282C4A0500F611FE /* CapabilityStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A7C282C49FE00F611FE /* CapabilityStatement.swift */; };
+		32F92B50282C4A0500F611FE /* FHIRAbstractResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A7D282C49FE00F611FE /* FHIRAbstractResource.swift */; };
+		32F92B51282C4A0500F611FE /* Specimen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A7E282C49FE00F611FE /* Specimen.swift */; };
+		32F92B52282C4A0500F611FE /* MetadataResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A7F282C49FE00F611FE /* MetadataResource.swift */; };
+		32F92B53282C4A0500F611FE /* ActivityDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A80282C49FF00F611FE /* ActivityDefinition.swift */; };
+		32F92B54282C4A0500F611FE /* ConceptMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A81282C49FF00F611FE /* ConceptMap.swift */; };
+		32F92B55282C4A0500F611FE /* DeviceDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A82282C49FF00F611FE /* DeviceDefinition.swift */; };
+		32F92B56282C4A0500F611FE /* OrganizationAffiliation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A83282C49FF00F611FE /* OrganizationAffiliation.swift */; };
+		32F92B57282C4A0500F611FE /* PaymentReconciliation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A84282C49FF00F611FE /* PaymentReconciliation.swift */; };
+		32F92B58282C4A0500F611FE /* MedicationStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A85282C49FF00F611FE /* MedicationStatement.swift */; };
+		32F92B59282C4A0500F611FE /* DataRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A86282C49FF00F611FE /* DataRequirement.swift */; };
+		32F92B5A282C4A0500F611FE /* RelatedArtifact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A87282C49FF00F611FE /* RelatedArtifact.swift */; };
+		32F92B5B282C4A0500F611FE /* FHIRBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A88282C49FF00F611FE /* FHIRBool.swift */; };
+		32F92B5C282C4A0500F611FE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A89282C4A0000F611FE /* Person.swift */; };
+		32F92B5D282C4A0500F611FE /* DiagnosticReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A8A282C4A0000F611FE /* DiagnosticReport.swift */; };
+		32F92B5E282C4A0500F611FE /* PlanDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A8B282C4A0000F611FE /* PlanDefinition.swift */; };
+		32F92B5F282C4A0500F611FE /* Procedure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A8C282C4A0000F611FE /* Procedure.swift */; };
+		32F92B60282C4A0500F611FE /* MessageDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A8D282C4A0000F611FE /* MessageDefinition.swift */; };
+		32F92B61282C4A0500F611FE /* FHIRServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A8E282C4A0000F611FE /* FHIRServerResponse.swift */; };
+		32F92B62282C4A0500F611FE /* CoverageEligibilityRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A8F282C4A0000F611FE /* CoverageEligibilityRequest.swift */; };
+		32F92B63282C4A0500F611FE /* ResearchSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A90282C4A0000F611FE /* ResearchSubject.swift */; };
+		32F92B64282C4A0500F611FE /* SearchParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A91282C4A0000F611FE /* SearchParameter.swift */; };
+		32F92B65282C4A0500F611FE /* MedicinalProductPackaged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A92282C4A0100F611FE /* MedicinalProductPackaged.swift */; };
+		32F92B66282C4A0500F611FE /* ElementDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A93282C4A0100F611FE /* ElementDefinition.swift */; };
+		32F92B67282C4A0500F611FE /* MedicinalProductPharmaceutical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A94282C4A0100F611FE /* MedicinalProductPharmaceutical.swift */; };
+		32F92B68282C4A0500F611FE /* StructureMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A95282C4A0100F611FE /* StructureMap.swift */; };
+		32F92B69282C4A0500F611FE /* ImmunizationRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A96282C4A0100F611FE /* ImmunizationRecommendation.swift */; };
+		32F92B6A282C4A0500F611FE /* ObservationDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A97282C4A0100F611FE /* ObservationDefinition.swift */; };
+		32F92B6B282C4A0500F611FE /* MedicationDispense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A98282C4A0100F611FE /* MedicationDispense.swift */; };
+		32F92B6C282C4A0500F611FE /* AuditEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A99282C4A0100F611FE /* AuditEvent.swift */; };
+		32F92B6D282C4A0500F611FE /* CompartmentDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A9A282C4A0100F611FE /* CompartmentDefinition.swift */; };
+		32F92B6E282C4A0500F611FE /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A9B282C4A0200F611FE /* Range.swift */; };
+		32F92B6F282C4A0500F611FE /* MedicationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A9C282C4A0200F611FE /* MedicationRequest.swift */; };
+		32F92B70282C4A0500F611FE /* TriggerDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A9D282C4A0200F611FE /* TriggerDefinition.swift */; };
+		32F92B71282C4A0500F611FE /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A9E282C4A0200F611FE /* Subscription.swift */; };
+		32F92B72282C4A0500F611FE /* MeasureReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92A9F282C4A0200F611FE /* MeasureReport.swift */; };
+		32F92B73282C4A0500F611FE /* FHIRServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AA0282C4A0200F611FE /* FHIRServer.swift */; };
+		32F92B74282C4A0500F611FE /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AA1282C4A0200F611FE /* Device.swift */; };
+		32F92B75282C4A0500F611FE /* InsurancePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AA2282C4A0200F611FE /* InsurancePlan.swift */; };
+		32F92B76282C4A0500F611FE /* CommunicationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AA3282C4A0200F611FE /* CommunicationRequest.swift */; };
+		32F92B77282C4A0500F611FE /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AA4282C4A0300F611FE /* Resource.swift */; };
+		32F92B78282C4A0500F611FE /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AA5282C4A0300F611FE /* Organization.swift */; };
+		32F92B79282C4A0500F611FE /* ImagingStudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AA6282C4A0300F611FE /* ImagingStudy.swift */; };
+		32F92B7A282C4A0500F611FE /* FHIRRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AA7282C4A0300F611FE /* FHIRRequestHandler.swift */; };
+		32F92B7B282C4A0500F611FE /* SubstanceProtein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AA8282C4A0300F611FE /* SubstanceProtein.swift */; };
+		32F92B7C282C4A0500F611FE /* FHIRDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AA9282C4A0300F611FE /* FHIRDecimal.swift */; };
+		32F92B7D282C4A0500F611FE /* MarketingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AAA282C4A0300F611FE /* MarketingStatus.swift */; };
+		32F92B7E282C4A0500F611FE /* Linkage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AAB282C4A0300F611FE /* Linkage.swift */; };
+		32F92B7F282C4A0500F611FE /* FHIRInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AAC282C4A0300F611FE /* FHIRInteger.swift */; };
+		32F92B80282C4A0500F611FE /* Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AAD282C4A0400F611FE /* Slot.swift */; };
+		32F92B81282C4A0500F611FE /* GraphDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AAE282C4A0400F611FE /* GraphDefinition.swift */; };
+		32F92B82282C4A0500F611FE /* Provenance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AAF282C4A0400F611FE /* Provenance.swift */; };
+		32F92B83282C4A0500F611FE /* ExplanationOfBenefit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AB0282C4A0400F611FE /* ExplanationOfBenefit.swift */; };
+		32F92B84282C4A0500F611FE /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AB1282C4A0400F611FE /* Bundle.swift */; };
+		32F92B85282C4A0500F611FE /* MedicinalProductIndication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AB2282C4A0400F611FE /* MedicinalProductIndication.swift */; };
+		32F92B86282C4A0500F611FE /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92AB3282C4A0400F611FE /* Element.swift */; };
+		32F92B96282C4A3100F611FE /* Patient+SMART.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92B87282C4A2F00F611FE /* Patient+SMART.swift */; };
+		32F92B97282C4A3100F611FE /* Element+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92B88282C4A2F00F611FE /* Element+Extensions.swift */; };
+		32F92B98282C4A3100F611FE /* FHIRBaseRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92B89282C4A2F00F611FE /* FHIRBaseRequestHandler.swift */; };
+		32F92B99282C4A3100F611FE /* FHIROperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92B8A282C4A2F00F611FE /* FHIROperation.swift */; };
+		32F92B9A282C4A3100F611FE /* FHIRServerDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92B8B282C4A2F00F611FE /* FHIRServerDataResponse.swift */; };
+		32F92B9B282C4A3100F611FE /* ValueSet+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92B8C282C4A3000F611FE /* ValueSet+Localization.swift */; };
+		32F92B9C282C4A3100F611FE /* DomainResource+Containment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92B8D282C4A3000F611FE /* DomainResource+Containment.swift */; };
+		32F92B9D282C4A3100F611FE /* Resource+Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92B8E282C4A3000F611FE /* Resource+Operation.swift */; };
+		32F92B9E282C4A3100F611FE /* Resource+REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92B8F282C4A3000F611FE /* Resource+REST.swift */; };
+		32F92B9F282C4A3100F611FE /* FHIRString+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92B90282C4A3000F611FE /* FHIRString+Localization.swift */; };
+		32F92BA0282C4A3100F611FE /* Reference+Resolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92B91282C4A3000F611FE /* Reference+Resolving.swift */; };
+		32F92BA1282C4A3100F611FE /* FHIRSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92B92282C4A3000F611FE /* FHIRSearch.swift */; };
+		32F92BA2282C4A3100F611FE /* FHIRMinimalServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92B93282C4A3100F611FE /* FHIRMinimalServer.swift */; };
+		32F92BA3282C4A3100F611FE /* FHIROpenServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92B94282C4A3100F611FE /* FHIROpenServer.swift */; };
+		32F92BA4282C4A3100F611FE /* Resource+Instantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92B95282C4A3100F611FE /* Resource+Instantiation.swift */; };
+		32F92BA6282C4A6F00F611FE /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BA5282C4A6F00F611FE /* Keychain.swift */; };
+		32F92BB6282C4A9E00F611FE /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BA7282C4A9C00F611FE /* extensions.swift */; };
+		32F92BB7282C4A9E00F611FE /* OAuth2DebugURLSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BA8282C4A9C00F611FE /* OAuth2DebugURLSessionDelegate.swift */; };
+		32F92BB8282C4A9E00F611FE /* OAuth2RequestPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BA9282C4A9C00F611FE /* OAuth2RequestPerformer.swift */; };
+		32F92BB9282C4A9E00F611FE /* OAuth2AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BAA282C4A9C00F611FE /* OAuth2AuthConfig.swift */; };
+		32F92BBA282C4A9E00F611FE /* OAuth2ClientConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BAB282C4A9C00F611FE /* OAuth2ClientConfig.swift */; };
+		32F92BBB282C4A9E00F611FE /* OAuth2KeychainAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BAC282C4A9D00F611FE /* OAuth2KeychainAccount.swift */; };
+		32F92BBC282C4A9E00F611FE /* OAuth2AuthorizerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BAD282C4A9D00F611FE /* OAuth2AuthorizerUI.swift */; };
+		32F92BBD282C4A9E00F611FE /* OAuth2Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BAE282C4A9D00F611FE /* OAuth2Requestable.swift */; };
+		32F92BBE282C4A9E00F611FE /* OAuth2AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BAF282C4A9D00F611FE /* OAuth2AuthRequest.swift */; };
+		32F92BBF282C4A9E00F611FE /* OAuth2CustomAuthorizerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BB0282C4A9D00F611FE /* OAuth2CustomAuthorizerUI.swift */; };
+		32F92BC0282C4A9E00F611FE /* OAuth2Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BB1282C4A9D00F611FE /* OAuth2Logger.swift */; };
+		32F92BC1282C4A9E00F611FE /* OAuth2Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BB2282C4A9D00F611FE /* OAuth2Response.swift */; };
+		32F92BC2282C4A9E00F611FE /* OAuth2Securable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BB3282C4A9D00F611FE /* OAuth2Securable.swift */; };
+		32F92BC3282C4A9E00F611FE /* OAuth2Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BB4282C4A9D00F611FE /* OAuth2Error.swift */; };
+		32F92BC4282C4A9E00F611FE /* OAuth2Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BB5282C4A9E00F611FE /* OAuth2Base.swift */; };
+		32F92BD2282C4AB100F611FE /* OAuth2CodeGrantNoTokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BC5282C4AB000F611FE /* OAuth2CodeGrantNoTokenType.swift */; };
+		32F92BD3282C4AB100F611FE /* OAuth2ImplicitGrantWithQueryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BC6282C4AB000F611FE /* OAuth2ImplicitGrantWithQueryParams.swift */; };
+		32F92BD4282C4AB100F611FE /* OAuth2ClientCredentialsReddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BC7282C4AB000F611FE /* OAuth2ClientCredentialsReddit.swift */; };
+		32F92BD5282C4AB100F611FE /* OAuth2CodeGrantAzure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BC8282C4AB000F611FE /* OAuth2CodeGrantAzure.swift */; };
+		32F92BD6282C4AB100F611FE /* OAuth2ClientCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BC9282C4AB000F611FE /* OAuth2ClientCredentials.swift */; };
+		32F92BD7282C4AB100F611FE /* OAuth2CodeGrantFacebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BCA282C4AB100F611FE /* OAuth2CodeGrantFacebook.swift */; };
+		32F92BD8282C4AB100F611FE /* OAuth2CodeGrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BCB282C4AB100F611FE /* OAuth2CodeGrant.swift */; };
+		32F92BD9282C4AB100F611FE /* OAuth2PasswordGrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BCC282C4AB100F611FE /* OAuth2PasswordGrant.swift */; };
+		32F92BDA282C4AB100F611FE /* OAuth2CodeGrantBasicAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BCD282C4AB100F611FE /* OAuth2CodeGrantBasicAuth.swift */; };
+		32F92BDB282C4AB100F611FE /* OAuth2ImplicitGrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BCE282C4AB100F611FE /* OAuth2ImplicitGrant.swift */; };
+		32F92BDC282C4AB100F611FE /* OAuth2CodeGrantLinkedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BCF282C4AB100F611FE /* OAuth2CodeGrantLinkedIn.swift */; };
+		32F92BDD282C4AB100F611FE /* OAuth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BD0282C4AB100F611FE /* OAuth2.swift */; };
+		32F92BDE282C4AB100F611FE /* OAuth2DynReg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BD1282C4AB100F611FE /* OAuth2DynReg.swift */; };
+		32F92BE2282C4ACD00F611FE /* OAuth2CustomAuthorizer+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BDF282C4ACD00F611FE /* OAuth2CustomAuthorizer+iOS.swift */; };
+		32F92BE3282C4ACD00F611FE /* OAuth2Authorizer+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BE0282C4ACD00F611FE /* OAuth2Authorizer+iOS.swift */; };
+		32F92BE4282C4ACD00F611FE /* OAuth2WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BE1282C4ACD00F611FE /* OAuth2WebViewController.swift */; };
 		B4081C27222B0030005A1CFE /* CONTRIBUTORS.md in Resources */ = {isa = PBXBuildFile; fileRef = B4081C26222B0030005A1CFE /* CONTRIBUTORS.md */; };
-		B450BD21232D96B800BA3D89 /* OAuth2 in Frameworks */ = {isa = PBXBuildFile; productRef = B450BD20232D96B800BA3D89 /* OAuth2 */; };
-		B450BD23232D96E100BA3D89 /* OAuth2 in Frameworks */ = {isa = PBXBuildFile; productRef = B450BD22232D96E100BA3D89 /* OAuth2 */; };
-		B4BC3F8D2328240C0097F26D /* SMART.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC3F8C2328240C0097F26D /* SMART.swift */; };
 		B4BC3F8E2328240C0097F26D /* SMART.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC3F8C2328240C0097F26D /* SMART.swift */; };
-		B4BC3FA3232954E90097F26D /* FHIR in Frameworks */ = {isa = PBXBuildFile; productRef = B4BC3FA2232954E90097F26D /* FHIR */; };
-		B4BC3FA5232954FB0097F26D /* FHIR in Frameworks */ = {isa = PBXBuildFile; productRef = B4BC3FA4232954FB0097F26D /* FHIR */; };
 		B4FA93752220F63100BD72A1 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43B1C319546DB20017679A /* Client.swift */; };
 		B4FA93762220F63100BD72A1 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43B1C419546DB20017679A /* Server.swift */; };
 		B4FA93772220F63100BD72A1 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43B1C219546DB20017679A /* Auth.swift */; };
@@ -28,7 +281,6 @@
 		B4FA93AF2221013900BD72A1 /* PatientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4D58FB1A826097005F5C7A /* PatientList.swift */; };
 		B4FA93B02221013900BD72A1 /* PatientListOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDAC5B1A8921F500844B48 /* PatientListOrder.swift */; };
 		B4FA93B12221013900BD72A1 /* PatientListQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDAC611A89237900844B48 /* PatientListQuery.swift */; };
-		B4FA93B22221013900BD72A1 /* Auth+macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE02F8171ACF30EA00179969 /* Auth+macOS.swift */; };
 		EE13AA9E1A5D453000B901FD /* ServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE29E701195838DD008882C8 /* ServerTests.swift */; };
 		EE13AA9F1A5D453A00B901FD /* ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43B1BA19546D880017679A /* ClientTests.swift */; };
 		EE13AAA01A5D474C00B901FD /* SMART.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECAA7831A5D3DE60062C64B /* SMART.framework */; };
@@ -66,16 +318,270 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32F929E1282C49ED00F611FE /* CoverageEligibilityResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverageEligibilityResponse.swift; sourceTree = "<group>"; };
+		32F929E2282C49ED00F611FE /* DeviceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceRequest.swift; sourceTree = "<group>"; };
+		32F929E3282C49EE00F611FE /* Attachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
+		32F929E4282C49EE00F611FE /* ChargeItemDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeItemDefinition.swift; sourceTree = "<group>"; };
+		32F929E5282C49EE00F611FE /* SampledData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampledData.swift; sourceTree = "<group>"; };
+		32F929E6282C49EE00F611FE /* AllergyIntolerance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergyIntolerance.swift; sourceTree = "<group>"; };
+		32F929E7282C49EE00F611FE /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		32F929E8282C49EE00F611FE /* Invoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
+		32F929E9282C49EE00F611FE /* TerminologyCapabilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminologyCapabilities.swift; sourceTree = "<group>"; };
+		32F929EA282C49EE00F611FE /* Measure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
+		32F929EB282C49EE00F611FE /* Communication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Communication.swift; sourceTree = "<group>"; };
+		32F929EC282C49EE00F611FE /* MedicationAdministration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationAdministration.swift; sourceTree = "<group>"; };
+		32F929ED282C49EF00F611FE /* SubstanceSourceMaterial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubstanceSourceMaterial.swift; sourceTree = "<group>"; };
+		32F929EE282C49EF00F611FE /* MedicinalProductContraindication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicinalProductContraindication.swift; sourceTree = "<group>"; };
+		32F929EF282C49EF00F611FE /* ContactDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetail.swift; sourceTree = "<group>"; };
+		32F929F0282C49EF00F611FE /* DateAndTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateAndTime.swift; sourceTree = "<group>"; };
+		32F929F1282C49EF00F611FE /* DocumentReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentReference.swift; sourceTree = "<group>"; };
+		32F929F2282C49EF00F611FE /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		32F929F3282C49EF00F611FE /* Evidence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evidence.swift; sourceTree = "<group>"; };
+		32F929F4282C49EF00F611FE /* Practitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Practitioner.swift; sourceTree = "<group>"; };
+		32F929F5282C49EF00F611FE /* MedicinalProductManufactured.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicinalProductManufactured.swift; sourceTree = "<group>"; };
+		32F929F6282C49F000F611FE /* QuestionnaireResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionnaireResponse.swift; sourceTree = "<group>"; };
+		32F929F7282C49F000F611FE /* FHIRAbstractBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRAbstractBase.swift; sourceTree = "<group>"; };
+		32F929F8282C49F000F611FE /* ExampleScenario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleScenario.swift; sourceTree = "<group>"; };
+		32F929F9282C49F000F611FE /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		32F929FA282C49F000F611FE /* CareTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareTeam.swift; sourceTree = "<group>"; };
+		32F929FB282C49F000F611FE /* CatalogEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogEntry.swift; sourceTree = "<group>"; };
+		32F929FC282C49F000F611FE /* Claim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Claim.swift; sourceTree = "<group>"; };
+		32F929FD282C49F000F611FE /* MedicinalProductInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicinalProductInteraction.swift; sourceTree = "<group>"; };
+		32F929FE282C49F000F611FE /* MedicationKnowledge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationKnowledge.swift; sourceTree = "<group>"; };
+		32F929FF282C49F000F611FE /* SubstanceSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubstanceSpecification.swift; sourceTree = "<group>"; };
+		32F92A00282C49F100F611FE /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		32F92A01282C49F100F611FE /* Signature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
+		32F92A02282C49F100F611FE /* SupplyDelivery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplyDelivery.swift; sourceTree = "<group>"; };
+		32F92A03282C49F100F611FE /* Ratio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ratio.swift; sourceTree = "<group>"; };
+		32F92A04282C49F100F611FE /* Distance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distance.swift; sourceTree = "<group>"; };
+		32F92A05282C49F100F611FE /* Dosage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dosage.swift; sourceTree = "<group>"; };
+		32F92A06282C49F100F611FE /* ResearchElementDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResearchElementDefinition.swift; sourceTree = "<group>"; };
+		32F92A07282C49F100F611FE /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		32F92A08282C49F100F611FE /* StructureDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructureDefinition.swift; sourceTree = "<group>"; };
+		32F92A09282C49F200F611FE /* MedicinalProductUndesirableEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicinalProductUndesirableEffect.swift; sourceTree = "<group>"; };
+		32F92A0A282C49F200F611FE /* SubstanceReferenceInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubstanceReferenceInformation.swift; sourceTree = "<group>"; };
+		32F92A0B282C49F200F611FE /* ValueSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueSet.swift; sourceTree = "<group>"; };
+		32F92A0C282C49F200F611FE /* Resource+Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resource+Meta.swift"; sourceTree = "<group>"; };
+		32F92A0D282C49F200F611FE /* RelatedPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatedPerson.swift; sourceTree = "<group>"; };
+		32F92A0E282C49F200F611FE /* Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		32F92A0F282C49F200F611FE /* Population.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Population.swift; sourceTree = "<group>"; };
+		32F92A10282C49F200F611FE /* OperationOutcome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationOutcome.swift; sourceTree = "<group>"; };
+		32F92A11282C49F200F611FE /* Contributor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
+		32F92A12282C49F200F611FE /* DomainResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainResource.swift; sourceTree = "<group>"; };
+		32F92A13282C49F300F611FE /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		32F92A14282C49F300F611FE /* EnrollmentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrollmentResponse.swift; sourceTree = "<group>"; };
+		32F92A15282C49F300F611FE /* Composition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Composition.swift; sourceTree = "<group>"; };
+		32F92A16282C49F300F611FE /* FHIRValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRValidationError.swift; sourceTree = "<group>"; };
+		32F92A17282C49F300F611FE /* Binary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Binary.swift; sourceTree = "<group>"; };
+		32F92A18282C49F300F611FE /* Expression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
+		32F92A19282C49F300F611FE /* CodeSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeSystem.swift; sourceTree = "<group>"; };
+		32F92A1A282C49F300F611FE /* MedicinalProductAuthorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicinalProductAuthorization.swift; sourceTree = "<group>"; };
+		32F92A1B282C49F300F611FE /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		32F92A1C282C49F400F611FE /* Substance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Substance.swift; sourceTree = "<group>"; };
+		32F92A1D282C49F400F611FE /* HumanName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HumanName.swift; sourceTree = "<group>"; };
+		32F92A1E282C49F400F611FE /* EnrollmentRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrollmentRequest.swift; sourceTree = "<group>"; };
+		32F92A1F282C49F400F611FE /* TestReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestReport.swift; sourceTree = "<group>"; };
+		32F92A20282C49F400F611FE /* Appointment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		32F92A21282C49F400F611FE /* RiskAssessment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiskAssessment.swift; sourceTree = "<group>"; };
+		32F92A22282C49F400F611FE /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		32F92A23282C49F400F611FE /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		32F92A24282C49F400F611FE /* Age.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Age.swift; sourceTree = "<group>"; };
+		32F92A25282C49F500F611FE /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		32F92A26282C49F500F611FE /* NutritionOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionOrder.swift; sourceTree = "<group>"; };
+		32F92A27282C49F500F611FE /* Period.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
+		32F92A28282C49F500F611FE /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		32F92A29282C49F500F611FE /* FHIRPrimitive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRPrimitive.swift; sourceTree = "<group>"; };
+		32F92A2A282C49F500F611FE /* UsageContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsageContext.swift; sourceTree = "<group>"; };
+		32F92A2B282C49F500F611FE /* MedicinalProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicinalProduct.swift; sourceTree = "<group>"; };
+		32F92A2C282C49F500F611FE /* PaymentNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentNotice.swift; sourceTree = "<group>"; };
+		32F92A2D282C49F600F611FE /* BackboneElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackboneElement.swift; sourceTree = "<group>"; };
+		32F92A2E282C49F600F611FE /* DocumentManifest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentManifest.swift; sourceTree = "<group>"; };
+		32F92A2F282C49F600F611FE /* TestScript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestScript.swift; sourceTree = "<group>"; };
+		32F92A30282C49F600F611FE /* Flag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
+		32F92A31282C49F600F611FE /* Immunization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Immunization.swift; sourceTree = "<group>"; };
+		32F92A32282C49F600F611FE /* ImplementationGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImplementationGuide.swift; sourceTree = "<group>"; };
+		32F92A33282C49F600F611FE /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		32F92A34282C49F700F611FE /* VerificationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationResult.swift; sourceTree = "<group>"; };
+		32F92A35282C49F700F611FE /* ClinicalImpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClinicalImpression.swift; sourceTree = "<group>"; };
+		32F92A36282C49F700F611FE /* AppointmentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentResponse.swift; sourceTree = "<group>"; };
+		32F92A37282C49F700F611FE /* Medication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
+		32F92A38282C49F700F611FE /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		32F92A39282C49F700F611FE /* ContactPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactPoint.swift; sourceTree = "<group>"; };
+		32F92A3A282C49F700F611FE /* SubstancePolymer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubstancePolymer.swift; sourceTree = "<group>"; };
+		32F92A3B282C49F700F611FE /* FHIRRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRRequest.swift; sourceTree = "<group>"; };
+		32F92A3C282C49F700F611FE /* Questionnaire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questionnaire.swift; sourceTree = "<group>"; };
+		32F92A3D282C49F800F611FE /* FHIRURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRURL.swift; sourceTree = "<group>"; };
+		32F92A3E282C49F800F611FE /* BiologicallyDerivedProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiologicallyDerivedProduct.swift; sourceTree = "<group>"; };
+		32F92A3F282C49F800F611FE /* EventDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDefinition.swift; sourceTree = "<group>"; };
+		32F92A40282C49F800F611FE /* Consent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consent.swift; sourceTree = "<group>"; };
+		32F92A41282C49F800F611FE /* FHIRAbstractBase+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FHIRAbstractBase+Factory.swift"; sourceTree = "<group>"; };
+		32F92A42282C49F800F611FE /* GuidanceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidanceResponse.swift; sourceTree = "<group>"; };
+		32F92A43282C49F800F611FE /* OperationDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationDefinition.swift; sourceTree = "<group>"; };
+		32F92A44282C49F800F611FE /* AdverseEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdverseEvent.swift; sourceTree = "<group>"; };
+		32F92A45282C49F800F611FE /* NamingSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamingSystem.swift; sourceTree = "<group>"; };
+		32F92A46282C49F800F611FE /* Count.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Count.swift; sourceTree = "<group>"; };
+		32F92A47282C49F900F611FE /* SubstanceNucleicAcid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubstanceNucleicAcid.swift; sourceTree = "<group>"; };
+		32F92A48282C49F900F611FE /* Quantity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quantity.swift; sourceTree = "<group>"; };
+		32F92A49282C49F900F611FE /* CodeableConcept.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeableConcept.swift; sourceTree = "<group>"; };
+		32F92A4A282C49F900F611FE /* EvidenceVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvidenceVariable.swift; sourceTree = "<group>"; };
+		32F92A4B282C49F900F611FE /* Base64Binary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64Binary.swift; sourceTree = "<group>"; };
+		32F92A4C282C49F900F611FE /* ProductShelfLife.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductShelfLife.swift; sourceTree = "<group>"; };
+		32F92A4D282C49F900F611FE /* Timing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timing.swift; sourceTree = "<group>"; };
+		32F92A4E282C49F900F611FE /* Condition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
+		32F92A4F282C49F900F611FE /* Coverage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coverage.swift; sourceTree = "<group>"; };
+		32F92A50282C49F900F611FE /* RiskEvidenceSynthesis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiskEvidenceSynthesis.swift; sourceTree = "<group>"; };
+		32F92A51282C49FA00F611FE /* EffectEvidenceSynthesis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectEvidenceSynthesis.swift; sourceTree = "<group>"; };
+		32F92A52282C49FA00F611FE /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		32F92A53282C49FA00F611FE /* MolecularSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MolecularSequence.swift; sourceTree = "<group>"; };
+		32F92A54282C49FA00F611FE /* ResearchStudy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResearchStudy.swift; sourceTree = "<group>"; };
+		32F92A55282C49FA00F611FE /* ResearchDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResearchDefinition.swift; sourceTree = "<group>"; };
+		32F92A56282C49FA00F611FE /* DeviceMetric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceMetric.swift; sourceTree = "<group>"; };
+		32F92A57282C49FA00F611FE /* VisionPrescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisionPrescription.swift; sourceTree = "<group>"; };
+		32F92A58282C49FA00F611FE /* Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		32F92A59282C49FA00F611FE /* Coding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coding.swift; sourceTree = "<group>"; };
+		32F92A5A282C49FB00F611FE /* PractitionerRole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PractitionerRole.swift; sourceTree = "<group>"; };
+		32F92A5B282C49FB00F611FE /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		32F92A5C282C49FB00F611FE /* FamilyMemberHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyMemberHistory.swift; sourceTree = "<group>"; };
+		32F92A5D282C49FB00F611FE /* SubstanceAmount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubstanceAmount.swift; sourceTree = "<group>"; };
+		32F92A5E282C49FB00F611FE /* ChargeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeItem.swift; sourceTree = "<group>"; };
+		32F92A5F282C49FB00F611FE /* DetectedIssue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectedIssue.swift; sourceTree = "<group>"; };
+		32F92A60282C49FB00F611FE /* ServiceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
+		32F92A61282C49FB00F611FE /* FHIREnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIREnum.swift; sourceTree = "<group>"; };
+		32F92A62282C49FB00F611FE /* RequestGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestGroup.swift; sourceTree = "<group>"; };
+		32F92A63282C49FB00F611FE /* EpisodeOfCare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeOfCare.swift; sourceTree = "<group>"; };
+		32F92A64282C49FC00F611FE /* SupplyRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplyRequest.swift; sourceTree = "<group>"; };
+		32F92A65282C49FC00F611FE /* HealthcareService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthcareService.swift; sourceTree = "<group>"; };
+		32F92A66282C49FC00F611FE /* MessageHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageHeader.swift; sourceTree = "<group>"; };
+		32F92A67282C49FC00F611FE /* SpecimenDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecimenDefinition.swift; sourceTree = "<group>"; };
+		32F92A68282C49FC00F611FE /* BodyStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyStructure.swift; sourceTree = "<group>"; };
+		32F92A69282C49FC00F611FE /* Observation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observation.swift; sourceTree = "<group>"; };
+		32F92A6A282C49FC00F611FE /* FHIRString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRString.swift; sourceTree = "<group>"; };
+		32F92A6B282C49FC00F611FE /* ProdCharacteristic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdCharacteristic.swift; sourceTree = "<group>"; };
+		32F92A6C282C49FC00F611FE /* Contract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
+		32F92A6D282C49FD00F611FE /* Encounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encounter.swift; sourceTree = "<group>"; };
+		32F92A6E282C49FD00F611FE /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		32F92A6F282C49FD00F611FE /* ParameterDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterDefinition.swift; sourceTree = "<group>"; };
+		32F92A70282C49FD00F611FE /* Basic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Basic.swift; sourceTree = "<group>"; };
+		32F92A71282C49FD00F611FE /* CodeSystems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeSystems.swift; sourceTree = "<group>"; };
+		32F92A72282C49FD00F611FE /* FHIRType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRType.swift; sourceTree = "<group>"; };
+		32F92A73282C49FD00F611FE /* ClaimResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClaimResponse.swift; sourceTree = "<group>"; };
+		32F92A74282C49FD00F611FE /* Narrative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Narrative.swift; sourceTree = "<group>"; };
+		32F92A75282C49FD00F611FE /* CarePlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarePlan.swift; sourceTree = "<group>"; };
+		32F92A76282C49FE00F611FE /* DeviceUseStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceUseStatement.swift; sourceTree = "<group>"; };
+		32F92A77282C49FE00F611FE /* ImmunizationEvaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImmunizationEvaluation.swift; sourceTree = "<group>"; };
+		32F92A78282C49FE00F611FE /* FHIRError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRError.swift; sourceTree = "<group>"; };
+		32F92A79282C49FE00F611FE /* Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		32F92A7A282C49FE00F611FE /* MedicinalProductIngredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicinalProductIngredient.swift; sourceTree = "<group>"; };
+		32F92A7B282C49FE00F611FE /* Reference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reference.swift; sourceTree = "<group>"; };
+		32F92A7C282C49FE00F611FE /* CapabilityStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapabilityStatement.swift; sourceTree = "<group>"; };
+		32F92A7D282C49FE00F611FE /* FHIRAbstractResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRAbstractResource.swift; sourceTree = "<group>"; };
+		32F92A7E282C49FE00F611FE /* Specimen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Specimen.swift; sourceTree = "<group>"; };
+		32F92A7F282C49FE00F611FE /* MetadataResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetadataResource.swift; sourceTree = "<group>"; };
+		32F92A80282C49FF00F611FE /* ActivityDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDefinition.swift; sourceTree = "<group>"; };
+		32F92A81282C49FF00F611FE /* ConceptMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConceptMap.swift; sourceTree = "<group>"; };
+		32F92A82282C49FF00F611FE /* DeviceDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDefinition.swift; sourceTree = "<group>"; };
+		32F92A83282C49FF00F611FE /* OrganizationAffiliation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationAffiliation.swift; sourceTree = "<group>"; };
+		32F92A84282C49FF00F611FE /* PaymentReconciliation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentReconciliation.swift; sourceTree = "<group>"; };
+		32F92A85282C49FF00F611FE /* MedicationStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationStatement.swift; sourceTree = "<group>"; };
+		32F92A86282C49FF00F611FE /* DataRequirement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequirement.swift; sourceTree = "<group>"; };
+		32F92A87282C49FF00F611FE /* RelatedArtifact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatedArtifact.swift; sourceTree = "<group>"; };
+		32F92A88282C49FF00F611FE /* FHIRBool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRBool.swift; sourceTree = "<group>"; };
+		32F92A89282C4A0000F611FE /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		32F92A8A282C4A0000F611FE /* DiagnosticReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnosticReport.swift; sourceTree = "<group>"; };
+		32F92A8B282C4A0000F611FE /* PlanDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanDefinition.swift; sourceTree = "<group>"; };
+		32F92A8C282C4A0000F611FE /* Procedure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Procedure.swift; sourceTree = "<group>"; };
+		32F92A8D282C4A0000F611FE /* MessageDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDefinition.swift; sourceTree = "<group>"; };
+		32F92A8E282C4A0000F611FE /* FHIRServerResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRServerResponse.swift; sourceTree = "<group>"; };
+		32F92A8F282C4A0000F611FE /* CoverageEligibilityRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverageEligibilityRequest.swift; sourceTree = "<group>"; };
+		32F92A90282C4A0000F611FE /* ResearchSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResearchSubject.swift; sourceTree = "<group>"; };
+		32F92A91282C4A0000F611FE /* SearchParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchParameter.swift; sourceTree = "<group>"; };
+		32F92A92282C4A0100F611FE /* MedicinalProductPackaged.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicinalProductPackaged.swift; sourceTree = "<group>"; };
+		32F92A93282C4A0100F611FE /* ElementDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementDefinition.swift; sourceTree = "<group>"; };
+		32F92A94282C4A0100F611FE /* MedicinalProductPharmaceutical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicinalProductPharmaceutical.swift; sourceTree = "<group>"; };
+		32F92A95282C4A0100F611FE /* StructureMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructureMap.swift; sourceTree = "<group>"; };
+		32F92A96282C4A0100F611FE /* ImmunizationRecommendation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImmunizationRecommendation.swift; sourceTree = "<group>"; };
+		32F92A97282C4A0100F611FE /* ObservationDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationDefinition.swift; sourceTree = "<group>"; };
+		32F92A98282C4A0100F611FE /* MedicationDispense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationDispense.swift; sourceTree = "<group>"; };
+		32F92A99282C4A0100F611FE /* AuditEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuditEvent.swift; sourceTree = "<group>"; };
+		32F92A9A282C4A0100F611FE /* CompartmentDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompartmentDefinition.swift; sourceTree = "<group>"; };
+		32F92A9B282C4A0200F611FE /* Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Range.swift; sourceTree = "<group>"; };
+		32F92A9C282C4A0200F611FE /* MedicationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationRequest.swift; sourceTree = "<group>"; };
+		32F92A9D282C4A0200F611FE /* TriggerDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerDefinition.swift; sourceTree = "<group>"; };
+		32F92A9E282C4A0200F611FE /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		32F92A9F282C4A0200F611FE /* MeasureReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureReport.swift; sourceTree = "<group>"; };
+		32F92AA0282C4A0200F611FE /* FHIRServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRServer.swift; sourceTree = "<group>"; };
+		32F92AA1282C4A0200F611FE /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		32F92AA2282C4A0200F611FE /* InsurancePlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsurancePlan.swift; sourceTree = "<group>"; };
+		32F92AA3282C4A0200F611FE /* CommunicationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationRequest.swift; sourceTree = "<group>"; };
+		32F92AA4282C4A0300F611FE /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		32F92AA5282C4A0300F611FE /* Organization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		32F92AA6282C4A0300F611FE /* ImagingStudy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagingStudy.swift; sourceTree = "<group>"; };
+		32F92AA7282C4A0300F611FE /* FHIRRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRRequestHandler.swift; sourceTree = "<group>"; };
+		32F92AA8282C4A0300F611FE /* SubstanceProtein.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubstanceProtein.swift; sourceTree = "<group>"; };
+		32F92AA9282C4A0300F611FE /* FHIRDecimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRDecimal.swift; sourceTree = "<group>"; };
+		32F92AAA282C4A0300F611FE /* MarketingStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketingStatus.swift; sourceTree = "<group>"; };
+		32F92AAB282C4A0300F611FE /* Linkage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Linkage.swift; sourceTree = "<group>"; };
+		32F92AAC282C4A0300F611FE /* FHIRInteger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRInteger.swift; sourceTree = "<group>"; };
+		32F92AAD282C4A0400F611FE /* Slot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slot.swift; sourceTree = "<group>"; };
+		32F92AAE282C4A0400F611FE /* GraphDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphDefinition.swift; sourceTree = "<group>"; };
+		32F92AAF282C4A0400F611FE /* Provenance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provenance.swift; sourceTree = "<group>"; };
+		32F92AB0282C4A0400F611FE /* ExplanationOfBenefit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationOfBenefit.swift; sourceTree = "<group>"; };
+		32F92AB1282C4A0400F611FE /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		32F92AB2282C4A0400F611FE /* MedicinalProductIndication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicinalProductIndication.swift; sourceTree = "<group>"; };
+		32F92AB3282C4A0400F611FE /* Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		32F92B87282C4A2F00F611FE /* Patient+SMART.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Patient+SMART.swift"; sourceTree = "<group>"; };
+		32F92B88282C4A2F00F611FE /* Element+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Element+Extensions.swift"; sourceTree = "<group>"; };
+		32F92B89282C4A2F00F611FE /* FHIRBaseRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRBaseRequestHandler.swift; sourceTree = "<group>"; };
+		32F92B8A282C4A2F00F611FE /* FHIROperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIROperation.swift; sourceTree = "<group>"; };
+		32F92B8B282C4A2F00F611FE /* FHIRServerDataResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRServerDataResponse.swift; sourceTree = "<group>"; };
+		32F92B8C282C4A3000F611FE /* ValueSet+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ValueSet+Localization.swift"; sourceTree = "<group>"; };
+		32F92B8D282C4A3000F611FE /* DomainResource+Containment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DomainResource+Containment.swift"; sourceTree = "<group>"; };
+		32F92B8E282C4A3000F611FE /* Resource+Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resource+Operation.swift"; sourceTree = "<group>"; };
+		32F92B8F282C4A3000F611FE /* Resource+REST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resource+REST.swift"; sourceTree = "<group>"; };
+		32F92B90282C4A3000F611FE /* FHIRString+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FHIRString+Localization.swift"; sourceTree = "<group>"; };
+		32F92B91282C4A3000F611FE /* Reference+Resolving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reference+Resolving.swift"; sourceTree = "<group>"; };
+		32F92B92282C4A3000F611FE /* FHIRSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRSearch.swift; sourceTree = "<group>"; };
+		32F92B93282C4A3100F611FE /* FHIRMinimalServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRMinimalServer.swift; sourceTree = "<group>"; };
+		32F92B94282C4A3100F611FE /* FHIROpenServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIROpenServer.swift; sourceTree = "<group>"; };
+		32F92B95282C4A3100F611FE /* Resource+Instantiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resource+Instantiation.swift"; sourceTree = "<group>"; };
+		32F92BA5282C4A6F00F611FE /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		32F92BA7282C4A9C00F611FE /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		32F92BA8282C4A9C00F611FE /* OAuth2DebugURLSessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2DebugURLSessionDelegate.swift; sourceTree = "<group>"; };
+		32F92BA9282C4A9C00F611FE /* OAuth2RequestPerformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2RequestPerformer.swift; sourceTree = "<group>"; };
+		32F92BAA282C4A9C00F611FE /* OAuth2AuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2AuthConfig.swift; sourceTree = "<group>"; };
+		32F92BAB282C4A9C00F611FE /* OAuth2ClientConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ClientConfig.swift; sourceTree = "<group>"; };
+		32F92BAC282C4A9D00F611FE /* OAuth2KeychainAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2KeychainAccount.swift; sourceTree = "<group>"; };
+		32F92BAD282C4A9D00F611FE /* OAuth2AuthorizerUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2AuthorizerUI.swift; sourceTree = "<group>"; };
+		32F92BAE282C4A9D00F611FE /* OAuth2Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Requestable.swift; sourceTree = "<group>"; };
+		32F92BAF282C4A9D00F611FE /* OAuth2AuthRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2AuthRequest.swift; sourceTree = "<group>"; };
+		32F92BB0282C4A9D00F611FE /* OAuth2CustomAuthorizerUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2CustomAuthorizerUI.swift; sourceTree = "<group>"; };
+		32F92BB1282C4A9D00F611FE /* OAuth2Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Logger.swift; sourceTree = "<group>"; };
+		32F92BB2282C4A9D00F611FE /* OAuth2Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Response.swift; sourceTree = "<group>"; };
+		32F92BB3282C4A9D00F611FE /* OAuth2Securable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Securable.swift; sourceTree = "<group>"; };
+		32F92BB4282C4A9D00F611FE /* OAuth2Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Error.swift; sourceTree = "<group>"; };
+		32F92BB5282C4A9E00F611FE /* OAuth2Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Base.swift; sourceTree = "<group>"; };
+		32F92BC5282C4AB000F611FE /* OAuth2CodeGrantNoTokenType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2CodeGrantNoTokenType.swift; sourceTree = "<group>"; };
+		32F92BC6282C4AB000F611FE /* OAuth2ImplicitGrantWithQueryParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ImplicitGrantWithQueryParams.swift; sourceTree = "<group>"; };
+		32F92BC7282C4AB000F611FE /* OAuth2ClientCredentialsReddit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ClientCredentialsReddit.swift; sourceTree = "<group>"; };
+		32F92BC8282C4AB000F611FE /* OAuth2CodeGrantAzure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2CodeGrantAzure.swift; sourceTree = "<group>"; };
+		32F92BC9282C4AB000F611FE /* OAuth2ClientCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ClientCredentials.swift; sourceTree = "<group>"; };
+		32F92BCA282C4AB100F611FE /* OAuth2CodeGrantFacebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2CodeGrantFacebook.swift; sourceTree = "<group>"; };
+		32F92BCB282C4AB100F611FE /* OAuth2CodeGrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2CodeGrant.swift; sourceTree = "<group>"; };
+		32F92BCC282C4AB100F611FE /* OAuth2PasswordGrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2PasswordGrant.swift; sourceTree = "<group>"; };
+		32F92BCD282C4AB100F611FE /* OAuth2CodeGrantBasicAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2CodeGrantBasicAuth.swift; sourceTree = "<group>"; };
+		32F92BCE282C4AB100F611FE /* OAuth2ImplicitGrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ImplicitGrant.swift; sourceTree = "<group>"; };
+		32F92BCF282C4AB100F611FE /* OAuth2CodeGrantLinkedIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2CodeGrantLinkedIn.swift; sourceTree = "<group>"; };
+		32F92BD0282C4AB100F611FE /* OAuth2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2.swift; sourceTree = "<group>"; };
+		32F92BD1282C4AB100F611FE /* OAuth2DynReg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2DynReg.swift; sourceTree = "<group>"; };
+		32F92BDF282C4ACD00F611FE /* OAuth2CustomAuthorizer+iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OAuth2CustomAuthorizer+iOS.swift"; sourceTree = "<group>"; };
+		32F92BE0282C4ACD00F611FE /* OAuth2Authorizer+iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OAuth2Authorizer+iOS.swift"; sourceTree = "<group>"; };
+		32F92BE1282C4ACD00F611FE /* OAuth2WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2WebViewController.swift; sourceTree = "<group>"; };
 		B4081C26222B0030005A1CFE /* CONTRIBUTORS.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTORS.md; sourceTree = SOURCE_ROOT; };
-		B4BC3F7B232709440097F26D /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		B4BC3F8C2328240C0097F26D /* SMART.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SMART.swift; path = Sources/SMART/SMART.swift; sourceTree = "<group>"; };
 		EE02F8111ACF30B000179969 /* PatientList+iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PatientList+iOS.swift"; sourceTree = "<group>"; };
 		EE02F8141ACF30E100179969 /* Auth+iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Auth+iOS.swift"; sourceTree = "<group>"; };
-		EE02F8171ACF30EA00179969 /* Auth+macOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Auth+macOS.swift"; sourceTree = "<group>"; };
-		EE1391C01AC582D9002C7B18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		EE13AA921A5D44D100B901FD /* SwiftSMART-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftSMART-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE13AAA11A5D47B200B901FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		EE1F49B61C0672810095BF0F /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = SOURCE_ROOT; };
 		EE29E701195838DD008882C8 /* ServerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTests.swift; sourceTree = "<group>"; };
 		EE29E70319583A04008882C8 /* metadata */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = metadata; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		EE43B1A919546D880017679A /* SMART.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMART.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +598,6 @@
 		EEDDAC611A89237900844B48 /* PatientListQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientListQuery.swift; sourceTree = "<group>"; };
 		EEEE312A1BB2961C008866E2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EEEE312C1BB29621008866E2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
-		EEEE31331BB2AB67008866E2 /* generate-docs.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "generate-docs.sh"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,15 +610,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EE43B1A519546D880017679A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B4BC3FA3232954E90097F26D /* FHIR in Frameworks */,
-				B450BD21232D96B800BA3D89 /* OAuth2 in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EE43B1B019546D880017679A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,18 +619,289 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EECAA77B1A5D3DE60062C64B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B4BC3FA5232954FB0097F26D /* FHIR in Frameworks */,
-				B450BD23232D96E100BA3D89 /* OAuth2 in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32F929DE282C497300F611FE /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				B4081C26222B0030005A1CFE /* CONTRIBUTORS.md */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		32F929DF282C498300F611FE /* OAuth2 */ = {
+			isa = PBXGroup;
+			children = (
+				32F92BA7282C4A9C00F611FE /* extensions.swift */,
+				32F92BA5282C4A6F00F611FE /* Keychain.swift */,
+				32F92BD0282C4AB100F611FE /* OAuth2.swift */,
+				32F92BAA282C4A9C00F611FE /* OAuth2AuthConfig.swift */,
+				32F92BE0282C4ACD00F611FE /* OAuth2Authorizer+iOS.swift */,
+				32F92BAD282C4A9D00F611FE /* OAuth2AuthorizerUI.swift */,
+				32F92BAF282C4A9D00F611FE /* OAuth2AuthRequest.swift */,
+				32F92BB5282C4A9E00F611FE /* OAuth2Base.swift */,
+				32F92BAB282C4A9C00F611FE /* OAuth2ClientConfig.swift */,
+				32F92BC9282C4AB000F611FE /* OAuth2ClientCredentials.swift */,
+				32F92BC7282C4AB000F611FE /* OAuth2ClientCredentialsReddit.swift */,
+				32F92BCB282C4AB100F611FE /* OAuth2CodeGrant.swift */,
+				32F92BC8282C4AB000F611FE /* OAuth2CodeGrantAzure.swift */,
+				32F92BCD282C4AB100F611FE /* OAuth2CodeGrantBasicAuth.swift */,
+				32F92BCA282C4AB100F611FE /* OAuth2CodeGrantFacebook.swift */,
+				32F92BCF282C4AB100F611FE /* OAuth2CodeGrantLinkedIn.swift */,
+				32F92BC5282C4AB000F611FE /* OAuth2CodeGrantNoTokenType.swift */,
+				32F92BDF282C4ACD00F611FE /* OAuth2CustomAuthorizer+iOS.swift */,
+				32F92BB0282C4A9D00F611FE /* OAuth2CustomAuthorizerUI.swift */,
+				32F92BA8282C4A9C00F611FE /* OAuth2DebugURLSessionDelegate.swift */,
+				32F92BD1282C4AB100F611FE /* OAuth2DynReg.swift */,
+				32F92BB4282C4A9D00F611FE /* OAuth2Error.swift */,
+				32F92BCE282C4AB100F611FE /* OAuth2ImplicitGrant.swift */,
+				32F92BC6282C4AB000F611FE /* OAuth2ImplicitGrantWithQueryParams.swift */,
+				32F92BAC282C4A9D00F611FE /* OAuth2KeychainAccount.swift */,
+				32F92BB1282C4A9D00F611FE /* OAuth2Logger.swift */,
+				32F92BCC282C4AB100F611FE /* OAuth2PasswordGrant.swift */,
+				32F92BAE282C4A9D00F611FE /* OAuth2Requestable.swift */,
+				32F92BA9282C4A9C00F611FE /* OAuth2RequestPerformer.swift */,
+				32F92BB2282C4A9D00F611FE /* OAuth2Response.swift */,
+				32F92BB3282C4A9D00F611FE /* OAuth2Securable.swift */,
+				32F92BE1282C4ACD00F611FE /* OAuth2WebViewController.swift */,
+			);
+			path = OAuth2;
+			sourceTree = "<group>";
+		};
+		32F929E0282C499000F611FE /* FHIR */ = {
+			isa = PBXGroup;
+			children = (
+				32F92A22282C49F400F611FE /* Account.swift */,
+				32F92A80282C49FF00F611FE /* ActivityDefinition.swift */,
+				32F92A1B282C49F300F611FE /* Address.swift */,
+				32F92A44282C49F800F611FE /* AdverseEvent.swift */,
+				32F92A24282C49F400F611FE /* Age.swift */,
+				32F929E6282C49EE00F611FE /* AllergyIntolerance.swift */,
+				32F92A28282C49F500F611FE /* Annotation.swift */,
+				32F92A20282C49F400F611FE /* Appointment.swift */,
+				32F92A36282C49F700F611FE /* AppointmentResponse.swift */,
+				32F929E3282C49EE00F611FE /* Attachment.swift */,
+				32F92A99282C4A0100F611FE /* AuditEvent.swift */,
+				32F92A2D282C49F600F611FE /* BackboneElement.swift */,
+				32F92A4B282C49F900F611FE /* Base64Binary.swift */,
+				32F92A70282C49FD00F611FE /* Basic.swift */,
+				32F92A17282C49F300F611FE /* Binary.swift */,
+				32F92A3E282C49F800F611FE /* BiologicallyDerivedProduct.swift */,
+				32F92A68282C49FC00F611FE /* BodyStructure.swift */,
+				32F92AB1282C4A0400F611FE /* Bundle.swift */,
+				32F92A7C282C49FE00F611FE /* CapabilityStatement.swift */,
+				32F92A75282C49FD00F611FE /* CarePlan.swift */,
+				32F929FA282C49F000F611FE /* CareTeam.swift */,
+				32F929FB282C49F000F611FE /* CatalogEntry.swift */,
+				32F92A5E282C49FB00F611FE /* ChargeItem.swift */,
+				32F929E4282C49EE00F611FE /* ChargeItemDefinition.swift */,
+				32F929FC282C49F000F611FE /* Claim.swift */,
+				32F92A73282C49FD00F611FE /* ClaimResponse.swift */,
+				32F92A35282C49F700F611FE /* ClinicalImpression.swift */,
+				32F92A49282C49F900F611FE /* CodeableConcept.swift */,
+				32F92A19282C49F300F611FE /* CodeSystem.swift */,
+				32F92A71282C49FD00F611FE /* CodeSystems.swift */,
+				32F92A59282C49FA00F611FE /* Coding.swift */,
+				32F929EB282C49EE00F611FE /* Communication.swift */,
+				32F92AA3282C4A0200F611FE /* CommunicationRequest.swift */,
+				32F92A9A282C4A0100F611FE /* CompartmentDefinition.swift */,
+				32F92A15282C49F300F611FE /* Composition.swift */,
+				32F92A81282C49FF00F611FE /* ConceptMap.swift */,
+				32F92A4E282C49F900F611FE /* Condition.swift */,
+				32F92A40282C49F800F611FE /* Consent.swift */,
+				32F929EF282C49EF00F611FE /* ContactDetail.swift */,
+				32F92A39282C49F700F611FE /* ContactPoint.swift */,
+				32F92A6C282C49FC00F611FE /* Contract.swift */,
+				32F92A11282C49F200F611FE /* Contributor.swift */,
+				32F92A46282C49F800F611FE /* Count.swift */,
+				32F92A4F282C49F900F611FE /* Coverage.swift */,
+				32F92A8F282C4A0000F611FE /* CoverageEligibilityRequest.swift */,
+				32F929E1282C49ED00F611FE /* CoverageEligibilityResponse.swift */,
+				32F92A86282C49FF00F611FE /* DataRequirement.swift */,
+				32F929F0282C49EF00F611FE /* DateAndTime.swift */,
+				32F92A5F282C49FB00F611FE /* DetectedIssue.swift */,
+				32F92AA1282C4A0200F611FE /* Device.swift */,
+				32F92A82282C49FF00F611FE /* DeviceDefinition.swift */,
+				32F92A56282C49FA00F611FE /* DeviceMetric.swift */,
+				32F929E2282C49ED00F611FE /* DeviceRequest.swift */,
+				32F92A76282C49FE00F611FE /* DeviceUseStatement.swift */,
+				32F92A8A282C4A0000F611FE /* DiagnosticReport.swift */,
+				32F92A04282C49F100F611FE /* Distance.swift */,
+				32F92A2E282C49F600F611FE /* DocumentManifest.swift */,
+				32F929F1282C49EF00F611FE /* DocumentReference.swift */,
+				32F92A12282C49F200F611FE /* DomainResource.swift */,
+				32F92B8D282C4A3000F611FE /* DomainResource+Containment.swift */,
+				32F92A05282C49F100F611FE /* Dosage.swift */,
+				32F92A58282C49FA00F611FE /* Duration.swift */,
+				32F92A51282C49FA00F611FE /* EffectEvidenceSynthesis.swift */,
+				32F92AB3282C4A0400F611FE /* Element.swift */,
+				32F92B88282C4A2F00F611FE /* Element+Extensions.swift */,
+				32F92A93282C4A0100F611FE /* ElementDefinition.swift */,
+				32F92A6D282C49FD00F611FE /* Encounter.swift */,
+				32F929E7282C49EE00F611FE /* Endpoint.swift */,
+				32F92A1E282C49F400F611FE /* EnrollmentRequest.swift */,
+				32F92A14282C49F300F611FE /* EnrollmentResponse.swift */,
+				32F92A63282C49FB00F611FE /* EpisodeOfCare.swift */,
+				32F92A3F282C49F800F611FE /* EventDefinition.swift */,
+				32F929F3282C49EF00F611FE /* Evidence.swift */,
+				32F92A4A282C49F900F611FE /* EvidenceVariable.swift */,
+				32F929F8282C49F000F611FE /* ExampleScenario.swift */,
+				32F92AB0282C4A0400F611FE /* ExplanationOfBenefit.swift */,
+				32F92A18282C49F300F611FE /* Expression.swift */,
+				32F92A13282C49F300F611FE /* Extension.swift */,
+				32F92A5C282C49FB00F611FE /* FamilyMemberHistory.swift */,
+				32F929F7282C49F000F611FE /* FHIRAbstractBase.swift */,
+				32F92A41282C49F800F611FE /* FHIRAbstractBase+Factory.swift */,
+				32F92A7D282C49FE00F611FE /* FHIRAbstractResource.swift */,
+				32F92B89282C4A2F00F611FE /* FHIRBaseRequestHandler.swift */,
+				32F92A88282C49FF00F611FE /* FHIRBool.swift */,
+				32F92AA9282C4A0300F611FE /* FHIRDecimal.swift */,
+				32F92A61282C49FB00F611FE /* FHIREnum.swift */,
+				32F92A78282C49FE00F611FE /* FHIRError.swift */,
+				32F92AAC282C4A0300F611FE /* FHIRInteger.swift */,
+				32F92B93282C4A3100F611FE /* FHIRMinimalServer.swift */,
+				32F92B94282C4A3100F611FE /* FHIROpenServer.swift */,
+				32F92B8A282C4A2F00F611FE /* FHIROperation.swift */,
+				32F92A29282C49F500F611FE /* FHIRPrimitive.swift */,
+				32F92A3B282C49F700F611FE /* FHIRRequest.swift */,
+				32F92AA7282C4A0300F611FE /* FHIRRequestHandler.swift */,
+				32F92B92282C4A3000F611FE /* FHIRSearch.swift */,
+				32F92AA0282C4A0200F611FE /* FHIRServer.swift */,
+				32F92B8B282C4A2F00F611FE /* FHIRServerDataResponse.swift */,
+				32F92A8E282C4A0000F611FE /* FHIRServerResponse.swift */,
+				32F92A6A282C49FC00F611FE /* FHIRString.swift */,
+				32F92B90282C4A3000F611FE /* FHIRString+Localization.swift */,
+				32F92A72282C49FD00F611FE /* FHIRType.swift */,
+				32F92A3D282C49F800F611FE /* FHIRURL.swift */,
+				32F92A16282C49F300F611FE /* FHIRValidationError.swift */,
+				32F92A30282C49F600F611FE /* Flag.swift */,
+				32F92A52282C49FA00F611FE /* Goal.swift */,
+				32F92AAE282C4A0400F611FE /* GraphDefinition.swift */,
+				32F92A33282C49F600F611FE /* Group.swift */,
+				32F92A42282C49F800F611FE /* GuidanceResponse.swift */,
+				32F92A65282C49FC00F611FE /* HealthcareService.swift */,
+				32F92A1D282C49F400F611FE /* HumanName.swift */,
+				32F92A79282C49FE00F611FE /* Identifier.swift */,
+				32F92AA6282C4A0300F611FE /* ImagingStudy.swift */,
+				32F92A31282C49F600F611FE /* Immunization.swift */,
+				32F92A77282C49FE00F611FE /* ImmunizationEvaluation.swift */,
+				32F92A96282C4A0100F611FE /* ImmunizationRecommendation.swift */,
+				32F92A32282C49F600F611FE /* ImplementationGuide.swift */,
+				32F92AA2282C4A0200F611FE /* InsurancePlan.swift */,
+				32F929E8282C49EE00F611FE /* Invoice.swift */,
+				32F92A6E282C49FD00F611FE /* Library.swift */,
+				32F92AAB282C4A0300F611FE /* Linkage.swift */,
+				32F929F2282C49EF00F611FE /* List.swift */,
+				32F92A00282C49F100F611FE /* Location.swift */,
+				32F92AAA282C4A0300F611FE /* MarketingStatus.swift */,
+				32F929EA282C49EE00F611FE /* Measure.swift */,
+				32F92A9F282C4A0200F611FE /* MeasureReport.swift */,
+				32F92A5B282C49FB00F611FE /* Media.swift */,
+				32F92A37282C49F700F611FE /* Medication.swift */,
+				32F929EC282C49EE00F611FE /* MedicationAdministration.swift */,
+				32F92A98282C4A0100F611FE /* MedicationDispense.swift */,
+				32F929FE282C49F000F611FE /* MedicationKnowledge.swift */,
+				32F92A9C282C4A0200F611FE /* MedicationRequest.swift */,
+				32F92A85282C49FF00F611FE /* MedicationStatement.swift */,
+				32F92A2B282C49F500F611FE /* MedicinalProduct.swift */,
+				32F92A1A282C49F300F611FE /* MedicinalProductAuthorization.swift */,
+				32F929EE282C49EF00F611FE /* MedicinalProductContraindication.swift */,
+				32F92AB2282C4A0400F611FE /* MedicinalProductIndication.swift */,
+				32F92A7A282C49FE00F611FE /* MedicinalProductIngredient.swift */,
+				32F929FD282C49F000F611FE /* MedicinalProductInteraction.swift */,
+				32F929F5282C49EF00F611FE /* MedicinalProductManufactured.swift */,
+				32F92A92282C4A0100F611FE /* MedicinalProductPackaged.swift */,
+				32F92A94282C4A0100F611FE /* MedicinalProductPharmaceutical.swift */,
+				32F92A09282C49F200F611FE /* MedicinalProductUndesirableEffect.swift */,
+				32F92A8D282C4A0000F611FE /* MessageDefinition.swift */,
+				32F92A66282C49FC00F611FE /* MessageHeader.swift */,
+				32F92A0E282C49F200F611FE /* Meta.swift */,
+				32F92A7F282C49FE00F611FE /* MetadataResource.swift */,
+				32F92A53282C49FA00F611FE /* MolecularSequence.swift */,
+				32F92A23282C49F400F611FE /* Money.swift */,
+				32F92A45282C49F800F611FE /* NamingSystem.swift */,
+				32F92A74282C49FD00F611FE /* Narrative.swift */,
+				32F92A26282C49F500F611FE /* NutritionOrder.swift */,
+				32F92A69282C49FC00F611FE /* Observation.swift */,
+				32F92A97282C4A0100F611FE /* ObservationDefinition.swift */,
+				32F92A43282C49F800F611FE /* OperationDefinition.swift */,
+				32F92A10282C49F200F611FE /* OperationOutcome.swift */,
+				32F92AA5282C4A0300F611FE /* Organization.swift */,
+				32F92A83282C49FF00F611FE /* OrganizationAffiliation.swift */,
+				32F92A6F282C49FD00F611FE /* ParameterDefinition.swift */,
+				32F92A07282C49F100F611FE /* Parameters.swift */,
+				32F92A25282C49F500F611FE /* Patient.swift */,
+				32F92B87282C4A2F00F611FE /* Patient+SMART.swift */,
+				32F92A2C282C49F500F611FE /* PaymentNotice.swift */,
+				32F92A84282C49FF00F611FE /* PaymentReconciliation.swift */,
+				32F92A27282C49F500F611FE /* Period.swift */,
+				32F92A89282C4A0000F611FE /* Person.swift */,
+				32F92A8B282C4A0000F611FE /* PlanDefinition.swift */,
+				32F92A0F282C49F200F611FE /* Population.swift */,
+				32F929F4282C49EF00F611FE /* Practitioner.swift */,
+				32F92A5A282C49FB00F611FE /* PractitionerRole.swift */,
+				32F92A8C282C4A0000F611FE /* Procedure.swift */,
+				32F92A6B282C49FC00F611FE /* ProdCharacteristic.swift */,
+				32F92A4C282C49F900F611FE /* ProductShelfLife.swift */,
+				32F92AAF282C4A0400F611FE /* Provenance.swift */,
+				32F92A48282C49F900F611FE /* Quantity.swift */,
+				32F92A3C282C49F700F611FE /* Questionnaire.swift */,
+				32F929F6282C49F000F611FE /* QuestionnaireResponse.swift */,
+				32F92A9B282C4A0200F611FE /* Range.swift */,
+				32F92A03282C49F100F611FE /* Ratio.swift */,
+				32F92A7B282C49FE00F611FE /* Reference.swift */,
+				32F92B91282C4A3000F611FE /* Reference+Resolving.swift */,
+				32F92A87282C49FF00F611FE /* RelatedArtifact.swift */,
+				32F92A0D282C49F200F611FE /* RelatedPerson.swift */,
+				32F92A62282C49FB00F611FE /* RequestGroup.swift */,
+				32F92A55282C49FA00F611FE /* ResearchDefinition.swift */,
+				32F92A06282C49F100F611FE /* ResearchElementDefinition.swift */,
+				32F92A54282C49FA00F611FE /* ResearchStudy.swift */,
+				32F92A90282C4A0000F611FE /* ResearchSubject.swift */,
+				32F92AA4282C4A0300F611FE /* Resource.swift */,
+				32F92B95282C4A3100F611FE /* Resource+Instantiation.swift */,
+				32F92A0C282C49F200F611FE /* Resource+Meta.swift */,
+				32F92B8E282C4A3000F611FE /* Resource+Operation.swift */,
+				32F92B8F282C4A3000F611FE /* Resource+REST.swift */,
+				32F92A21282C49F400F611FE /* RiskAssessment.swift */,
+				32F92A50282C49F900F611FE /* RiskEvidenceSynthesis.swift */,
+				32F929E5282C49EE00F611FE /* SampledData.swift */,
+				32F929F9282C49F000F611FE /* Schedule.swift */,
+				32F92A91282C4A0000F611FE /* SearchParameter.swift */,
+				32F92A60282C49FB00F611FE /* ServiceRequest.swift */,
+				32F92A01282C49F100F611FE /* Signature.swift */,
+				32F92AAD282C4A0400F611FE /* Slot.swift */,
+				32F92A7E282C49FE00F611FE /* Specimen.swift */,
+				32F92A67282C49FC00F611FE /* SpecimenDefinition.swift */,
+				32F92A08282C49F100F611FE /* StructureDefinition.swift */,
+				32F92A95282C4A0100F611FE /* StructureMap.swift */,
+				32F92A9E282C4A0200F611FE /* Subscription.swift */,
+				32F92A1C282C49F400F611FE /* Substance.swift */,
+				32F92A5D282C49FB00F611FE /* SubstanceAmount.swift */,
+				32F92A47282C49F900F611FE /* SubstanceNucleicAcid.swift */,
+				32F92A3A282C49F700F611FE /* SubstancePolymer.swift */,
+				32F92AA8282C4A0300F611FE /* SubstanceProtein.swift */,
+				32F92A0A282C49F200F611FE /* SubstanceReferenceInformation.swift */,
+				32F929ED282C49EF00F611FE /* SubstanceSourceMaterial.swift */,
+				32F929FF282C49F000F611FE /* SubstanceSpecification.swift */,
+				32F92A02282C49F100F611FE /* SupplyDelivery.swift */,
+				32F92A64282C49FC00F611FE /* SupplyRequest.swift */,
+				32F92A38282C49F700F611FE /* Task.swift */,
+				32F929E9282C49EE00F611FE /* TerminologyCapabilities.swift */,
+				32F92A1F282C49F400F611FE /* TestReport.swift */,
+				32F92A2F282C49F600F611FE /* TestScript.swift */,
+				32F92A4D282C49F900F611FE /* Timing.swift */,
+				32F92A9D282C4A0200F611FE /* TriggerDefinition.swift */,
+				32F92A2A282C49F500F611FE /* UsageContext.swift */,
+				32F92A0B282C49F200F611FE /* ValueSet.swift */,
+				32F92B8C282C4A3000F611FE /* ValueSet+Localization.swift */,
+				32F92A34282C49F700F611FE /* VerificationResult.swift */,
+				32F92A57282C49FA00F611FE /* VisionPrescription.swift */,
+			);
+			path = FHIR;
+			sourceTree = "<group>";
+		};
 		B4BC3F8B232823F30097F26D /* SMART */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,15 +920,6 @@
 			path = Sources/iOS;
 			sourceTree = "<group>";
 		};
-		EE02F8161ACF30EA00179969 /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				EE02F8171ACF30EA00179969 /* Auth+macOS.swift */,
-			);
-			name = macOS;
-			path = Sources/macOS;
-			sourceTree = "<group>";
-		};
 		EE43B1AA19546D880017679A /* Client */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,18 +932,6 @@
 			);
 			name = Client;
 			path = Sources/Client;
-			sourceTree = "<group>";
-		};
-		EE43B1AB19546D880017679A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B4081C26222B0030005A1CFE /* CONTRIBUTORS.md */,
-				EE1F49B61C0672810095BF0F /* CHANGELOG.md */,
-				EEEE31331BB2AB67008866E2 /* generate-docs.sh */,
-				EE1391C01AC582D9002C7B18 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		EE43B1B719546D880017679A /* Tests */ = {
@@ -220,16 +966,16 @@
 		EE55C2601948906000849670 = {
 			isa = PBXGroup;
 			children = (
-				B4BC3F7B232709440097F26D /* Package.swift */,
+				32F929E0282C499000F611FE /* FHIR */,
+				32F929DF282C498300F611FE /* OAuth2 */,
 				EE74D04B195C112300393DCA /* README.md */,
 				B4BC3F8B232823F30097F26D /* SMART */,
 				EE43B1AA19546D880017679A /* Client */,
 				EE02F8101ACF30B000179969 /* iOS */,
-				EE02F8161ACF30EA00179969 /* macOS */,
-				EE43B1AB19546D880017679A /* Supporting Files */,
 				EE43B1B719546D880017679A /* Tests */,
 				EE43B5C8195497A10017679A /* Frameworks */,
 				EE55C26A1948906000849670 /* Products */,
+				32F929DE282C497300F611FE /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -287,7 +1033,6 @@
 			buildConfigurationList = EE43B1BC19546D880017679A /* Build configuration list for PBXNativeTarget "SwiftSMART-iOS" */;
 			buildPhases = (
 				EE43B1A419546D880017679A /* Sources */,
-				EE43B1A519546D880017679A /* Frameworks */,
 				EE43B1A619546D880017679A /* Headers */,
 				EE43B1A719546D880017679A /* Resources */,
 			);
@@ -296,10 +1041,6 @@
 			dependencies = (
 			);
 			name = "SwiftSMART-iOS";
-			packageProductDependencies = (
-				B4BC3FA2232954E90097F26D /* FHIR */,
-				B450BD20232D96B800BA3D89 /* OAuth2 */,
-			);
 			productName = "SMART-on-FHIR-iOS";
 			productReference = EE43B1A919546D880017679A /* SMART.framework */;
 			productType = "com.apple.product-type.framework";
@@ -328,7 +1069,6 @@
 			buildConfigurationList = EECAA7801A5D3DE60062C64B /* Build configuration list for PBXNativeTarget "SwiftSMART-macOS" */;
 			buildPhases = (
 				EECAA6F51A5D3DE60062C64B /* Sources */,
-				EECAA77B1A5D3DE60062C64B /* Frameworks */,
 				EECAA77D1A5D3DE60062C64B /* Headers */,
 				EECAA77F1A5D3DE60062C64B /* Resources */,
 			);
@@ -337,10 +1077,6 @@
 			dependencies = (
 			);
 			name = "SwiftSMART-macOS";
-			packageProductDependencies = (
-				B4BC3FA4232954FB0097F26D /* FHIR */,
-				B450BD22232D96E100BA3D89 /* OAuth2 */,
-			);
 			productName = "SMART-on-FHIR-iOS";
 			productReference = EECAA7831A5D3DE60062C64B /* SMART.framework */;
 			productType = "com.apple.product-type.framework";
@@ -383,10 +1119,6 @@
 				en,
 			);
 			mainGroup = EE55C2601948906000849670;
-			packageReferences = (
-				B4BC3FA1232954E90097F26D /* XCRemoteSwiftPackageReference "Swift-FHIR" */,
-				B450BD1F232D96B800BA3D89 /* XCRemoteSwiftPackageReference "OAuth2" */,
-			);
 			productRefGroup = EE55C26A1948906000849670 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -447,15 +1179,272 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32F92B9A282C4A3100F611FE /* FHIRServerDataResponse.swift in Sources */,
+				32F92BBB282C4A9E00F611FE /* OAuth2KeychainAccount.swift in Sources */,
+				32F92B62282C4A0500F611FE /* CoverageEligibilityRequest.swift in Sources */,
+				32F92B27282C4A0400F611FE /* ResearchStudy.swift in Sources */,
+				32F92ACA282C4A0400F611FE /* FHIRAbstractBase.swift in Sources */,
+				32F92AEA282C4A0400F611FE /* Binary.swift in Sources */,
+				32F92B12282C4A0400F611FE /* EventDefinition.swift in Sources */,
+				32F92ABC282C4A0400F611FE /* TerminologyCapabilities.swift in Sources */,
+				32F92B20282C4A0400F611FE /* Timing.swift in Sources */,
+				32F92AF3282C4A0400F611FE /* Appointment.swift in Sources */,
+				32F92B09282C4A0400F611FE /* AppointmentResponse.swift in Sources */,
+				32F92AD3282C4A0400F611FE /* Location.swift in Sources */,
+				32F92BBE282C4A9E00F611FE /* OAuth2AuthRequest.swift in Sources */,
+				32F92B59282C4A0500F611FE /* DataRequirement.swift in Sources */,
+				32F92B9C282C4A3100F611FE /* DomainResource+Containment.swift in Sources */,
+				32F92B73282C4A0500F611FE /* FHIRServer.swift in Sources */,
 				B4FA93752220F63100BD72A1 /* Client.swift in Sources */,
+				32F92B26282C4A0400F611FE /* MolecularSequence.swift in Sources */,
+				32F92AFB282C4A0400F611FE /* Annotation.swift in Sources */,
+				32F92AE4282C4A0400F611FE /* Contributor.swift in Sources */,
+				32F92B0C282C4A0400F611FE /* ContactPoint.swift in Sources */,
+				32F92B23282C4A0400F611FE /* RiskEvidenceSynthesis.swift in Sources */,
+				32F92B1C282C4A0400F611FE /* CodeableConcept.swift in Sources */,
+				32F92B7C282C4A0500F611FE /* FHIRDecimal.swift in Sources */,
+				32F92AD7282C4A0400F611FE /* Distance.swift in Sources */,
+				32F92B33282C4A0500F611FE /* ServiceRequest.swift in Sources */,
+				32F92B7D282C4A0500F611FE /* MarketingStatus.swift in Sources */,
+				32F92B74282C4A0500F611FE /* Device.swift in Sources */,
+				32F92BD7282C4AB100F611FE /* OAuth2CodeGrantFacebook.swift in Sources */,
+				32F92BC1282C4A9E00F611FE /* OAuth2Response.swift in Sources */,
+				32F92B65282C4A0500F611FE /* MedicinalProductPackaged.swift in Sources */,
+				32F92B48282C4A0500F611FE /* CarePlan.swift in Sources */,
+				32F92AD5282C4A0400F611FE /* SupplyDelivery.swift in Sources */,
+				32F92AE3282C4A0400F611FE /* OperationOutcome.swift in Sources */,
+				32F92BE4282C4ACD00F611FE /* OAuth2WebViewController.swift in Sources */,
+				32F92AF0282C4A0400F611FE /* HumanName.swift in Sources */,
+				32F92ABD282C4A0400F611FE /* Measure.swift in Sources */,
+				32F92B4F282C4A0500F611FE /* CapabilityStatement.swift in Sources */,
+				32F92B24282C4A0400F611FE /* EffectEvidenceSynthesis.swift in Sources */,
+				32F92B98282C4A3100F611FE /* FHIRBaseRequestHandler.swift in Sources */,
+				32F92B25282C4A0400F611FE /* Goal.swift in Sources */,
+				32F92AE0282C4A0400F611FE /* RelatedPerson.swift in Sources */,
+				32F92B11282C4A0400F611FE /* BiologicallyDerivedProduct.swift in Sources */,
+				32F92B77282C4A0500F611FE /* Resource.swift in Sources */,
+				32F92AE1282C4A0400F611FE /* Meta.swift in Sources */,
+				32F92BD3282C4AB100F611FE /* OAuth2ImplicitGrantWithQueryParams.swift in Sources */,
+				32F92B6F282C4A0500F611FE /* MedicationRequest.swift in Sources */,
+				32F92BD8282C4AB100F611FE /* OAuth2CodeGrant.swift in Sources */,
+				32F92B97282C4A3100F611FE /* Element+Extensions.swift in Sources */,
+				32F92B5B282C4A0500F611FE /* FHIRBool.swift in Sources */,
+				32F92AB8282C4A0400F611FE /* SampledData.swift in Sources */,
+				32F92B45282C4A0500F611FE /* FHIRType.swift in Sources */,
 				B4FA93762220F63100BD72A1 /* Server.swift in Sources */,
+				32F92BD4282C4AB100F611FE /* OAuth2ClientCredentialsReddit.swift in Sources */,
+				32F92AC1282C4A0400F611FE /* MedicinalProductContraindication.swift in Sources */,
+				32F92B7A282C4A0500F611FE /* FHIRRequestHandler.swift in Sources */,
+				32F92B32282C4A0500F611FE /* DetectedIssue.swift in Sources */,
+				32F92B66282C4A0500F611FE /* ElementDefinition.swift in Sources */,
+				32F92B6D282C4A0500F611FE /* CompartmentDefinition.swift in Sources */,
+				32F92AD1282C4A0400F611FE /* MedicationKnowledge.swift in Sources */,
+				32F92B1F282C4A0400F611FE /* ProductShelfLife.swift in Sources */,
+				32F92ADD282C4A0400F611FE /* SubstanceReferenceInformation.swift in Sources */,
+				32F92B1B282C4A0400F611FE /* Quantity.swift in Sources */,
 				B4FA93772220F63100BD72A1 /* Auth.swift in Sources */,
+				32F92B07282C4A0400F611FE /* VerificationResult.swift in Sources */,
+				32F92BD9282C4AB100F611FE /* OAuth2PasswordGrant.swift in Sources */,
+				32F92ABA282C4A0400F611FE /* Endpoint.swift in Sources */,
+				32F92BA3282C4A3100F611FE /* FHIROpenServer.swift in Sources */,
+				32F92B5F282C4A0500F611FE /* Procedure.swift in Sources */,
+				32F92B63282C4A0500F611FE /* ResearchSubject.swift in Sources */,
+				32F92B2A282C4A0500F611FE /* VisionPrescription.swift in Sources */,
+				32F92B02282C4A0400F611FE /* TestScript.swift in Sources */,
+				32F92B43282C4A0500F611FE /* Basic.swift in Sources */,
+				32F92B86282C4A0500F611FE /* Element.swift in Sources */,
+				32F92B28282C4A0500F611FE /* ResearchDefinition.swift in Sources */,
+				32F92B38282C4A0500F611FE /* HealthcareService.swift in Sources */,
+				32F92B6E282C4A0500F611FE /* Range.swift in Sources */,
+				32F92BA0282C4A3100F611FE /* Reference+Resolving.swift in Sources */,
+				32F92AD6282C4A0400F611FE /* Ratio.swift in Sources */,
+				32F92B7F282C4A0500F611FE /* FHIRInteger.swift in Sources */,
+				32F92B5A282C4A0500F611FE /* RelatedArtifact.swift in Sources */,
+				32F92ADB282C4A0400F611FE /* StructureDefinition.swift in Sources */,
+				32F92ABB282C4A0400F611FE /* Invoice.swift in Sources */,
+				32F92B19282C4A0400F611FE /* Count.swift in Sources */,
+				32F92B18282C4A0400F611FE /* NamingSystem.swift in Sources */,
+				32F92B41282C4A0500F611FE /* Library.swift in Sources */,
+				32F92B69282C4A0500F611FE /* ImmunizationRecommendation.swift in Sources */,
+				32F92AF1282C4A0400F611FE /* EnrollmentRequest.swift in Sources */,
+				32F92B51282C4A0500F611FE /* Specimen.swift in Sources */,
+				32F92B39282C4A0500F611FE /* MessageHeader.swift in Sources */,
+				32F92B56282C4A0500F611FE /* OrganizationAffiliation.swift in Sources */,
+				32F92B58282C4A0500F611FE /* MedicationStatement.swift in Sources */,
+				32F92B49282C4A0500F611FE /* DeviceUseStatement.swift in Sources */,
+				32F92B52282C4A0500F611FE /* MetadataResource.swift in Sources */,
+				32F92AB7282C4A0400F611FE /* ChargeItemDefinition.swift in Sources */,
+				32F92AD2282C4A0400F611FE /* SubstanceSpecification.swift in Sources */,
+				32F92B2B282C4A0500F611FE /* Duration.swift in Sources */,
+				32F92B9D282C4A3100F611FE /* Resource+Operation.swift in Sources */,
+				32F92AC2282C4A0400F611FE /* ContactDetail.swift in Sources */,
+				32F92AC6282C4A0400F611FE /* Evidence.swift in Sources */,
+				32F92BB6282C4A9E00F611FE /* extensions.swift in Sources */,
+				32F92ACD282C4A0400F611FE /* CareTeam.swift in Sources */,
+				32F92B0E282C4A0400F611FE /* FHIRRequest.swift in Sources */,
+				32F92B40282C4A0500F611FE /* Encounter.swift in Sources */,
+				32F92AF2282C4A0400F611FE /* TestReport.swift in Sources */,
+				32F92B3E282C4A0500F611FE /* ProdCharacteristic.swift in Sources */,
+				32F92AEB282C4A0400F611FE /* Expression.swift in Sources */,
+				32F92BC0282C4A9E00F611FE /* OAuth2Logger.swift in Sources */,
+				32F92B76282C4A0500F611FE /* CommunicationRequest.swift in Sources */,
+				32F92B79282C4A0500F611FE /* ImagingStudy.swift in Sources */,
+				32F92B6A282C4A0500F611FE /* ObservationDefinition.swift in Sources */,
+				32F92AF8282C4A0400F611FE /* Patient.swift in Sources */,
+				32F92B3C282C4A0500F611FE /* Observation.swift in Sources */,
+				32F92B17282C4A0400F611FE /* AdverseEvent.swift in Sources */,
+				32F92B70282C4A0500F611FE /* TriggerDefinition.swift in Sources */,
+				32F92AED282C4A0400F611FE /* MedicinalProductAuthorization.swift in Sources */,
+				32F92B44282C4A0500F611FE /* CodeSystems.swift in Sources */,
+				32F92BC3282C4A9E00F611FE /* OAuth2Error.swift in Sources */,
+				32F92B30282C4A0500F611FE /* SubstanceAmount.swift in Sources */,
+				32F92BE3282C4ACD00F611FE /* OAuth2Authorizer+iOS.swift in Sources */,
+				32F92B1E282C4A0400F611FE /* Base64Binary.swift in Sources */,
+				32F92BC2282C4A9E00F611FE /* OAuth2Securable.swift in Sources */,
+				32F92ACE282C4A0400F611FE /* CatalogEntry.swift in Sources */,
+				32F92B2D282C4A0500F611FE /* PractitionerRole.swift in Sources */,
+				32F92B54282C4A0500F611FE /* ConceptMap.swift in Sources */,
+				32F92B04282C4A0400F611FE /* Immunization.swift in Sources */,
+				32F92AEC282C4A0400F611FE /* CodeSystem.swift in Sources */,
+				32F92BBC282C4A9E00F611FE /* OAuth2AuthorizerUI.swift in Sources */,
+				32F92AFA282C4A0400F611FE /* Period.swift in Sources */,
+				32F92B75282C4A0500F611FE /* InsurancePlan.swift in Sources */,
+				32F92B14282C4A0400F611FE /* FHIRAbstractBase+Factory.swift in Sources */,
+				32F92B53282C4A0500F611FE /* ActivityDefinition.swift in Sources */,
+				32F92B03282C4A0400F611FE /* Flag.swift in Sources */,
+				32F92ADA282C4A0400F611FE /* Parameters.swift in Sources */,
+				32F92AD0282C4A0400F611FE /* MedicinalProductInteraction.swift in Sources */,
 				B4FA93782220F63100BD72A1 /* PatientList.swift in Sources */,
+				32F92BBF282C4A9E00F611FE /* OAuth2CustomAuthorizerUI.swift in Sources */,
+				32F92BBD282C4A9E00F611FE /* OAuth2Requestable.swift in Sources */,
+				32F92B5D282C4A0500F611FE /* DiagnosticReport.swift in Sources */,
+				32F92AC7282C4A0400F611FE /* Practitioner.swift in Sources */,
+				32F92AC3282C4A0400F611FE /* DateAndTime.swift in Sources */,
+				32F92B21282C4A0400F611FE /* Condition.swift in Sources */,
+				32F92AFD282C4A0400F611FE /* UsageContext.swift in Sources */,
+				32F92BD6282C4AB100F611FE /* OAuth2ClientCredentials.swift in Sources */,
+				32F92B2F282C4A0500F611FE /* FamilyMemberHistory.swift in Sources */,
+				32F92AE8282C4A0400F611FE /* Composition.swift in Sources */,
+				32F92BE2282C4ACD00F611FE /* OAuth2CustomAuthorizer+iOS.swift in Sources */,
+				32F92B61282C4A0500F611FE /* FHIRServerResponse.swift in Sources */,
+				32F92B0A282C4A0400F611FE /* Medication.swift in Sources */,
+				32F92B99282C4A3100F611FE /* FHIROperation.swift in Sources */,
+				32F92AF7282C4A0400F611FE /* Age.swift in Sources */,
+				32F92BB7282C4A9E00F611FE /* OAuth2DebugURLSessionDelegate.swift in Sources */,
+				32F92B78282C4A0500F611FE /* Organization.swift in Sources */,
+				32F92ACB282C4A0400F611FE /* ExampleScenario.swift in Sources */,
+				32F92B71282C4A0500F611FE /* Subscription.swift in Sources */,
+				32F92AB6282C4A0400F611FE /* Attachment.swift in Sources */,
+				32F92B13282C4A0400F611FE /* Consent.swift in Sources */,
+				32F92BD5282C4AB100F611FE /* OAuth2CodeGrantAzure.swift in Sources */,
+				32F92B4B282C4A0500F611FE /* FHIRError.swift in Sources */,
+				32F92BDE282C4AB100F611FE /* OAuth2DynReg.swift in Sources */,
+				32F92BA2282C4A3100F611FE /* FHIRMinimalServer.swift in Sources */,
+				32F92BA4282C4A3100F611FE /* Resource+Instantiation.swift in Sources */,
+				32F92B16282C4A0400F611FE /* OperationDefinition.swift in Sources */,
+				32F92B4E282C4A0500F611FE /* Reference.swift in Sources */,
+				32F92AE7282C4A0400F611FE /* EnrollmentResponse.swift in Sources */,
+				32F92B29282C4A0500F611FE /* DeviceMetric.swift in Sources */,
+				32F92B00282C4A0400F611FE /* BackboneElement.swift in Sources */,
+				32F92B34282C4A0500F611FE /* FHIREnum.swift in Sources */,
+				32F92AE6282C4A0400F611FE /* Extension.swift in Sources */,
+				32F92AF5282C4A0400F611FE /* Account.swift in Sources */,
+				32F92B68282C4A0500F611FE /* StructureMap.swift in Sources */,
+				32F92B9B282C4A3100F611FE /* ValueSet+Localization.swift in Sources */,
 				B4FA93792220F63100BD72A1 /* PatientListOrder.swift in Sources */,
+				32F92AE5282C4A0400F611FE /* DomainResource.swift in Sources */,
+				32F92B31282C4A0500F611FE /* ChargeItem.swift in Sources */,
+				32F92B5E282C4A0500F611FE /* PlanDefinition.swift in Sources */,
+				32F92B37282C4A0500F611FE /* SupplyRequest.swift in Sources */,
+				32F92B47282C4A0500F611FE /* Narrative.swift in Sources */,
+				32F92BDB282C4AB100F611FE /* OAuth2ImplicitGrant.swift in Sources */,
+				32F92B08282C4A0400F611FE /* ClinicalImpression.swift in Sources */,
+				32F92AB5282C4A0400F611FE /* DeviceRequest.swift in Sources */,
+				32F92B05282C4A0400F611FE /* ImplementationGuide.swift in Sources */,
+				32F92B0F282C4A0400F611FE /* Questionnaire.swift in Sources */,
+				32F92B67282C4A0500F611FE /* MedicinalProductPharmaceutical.swift in Sources */,
+				32F92AC9282C4A0400F611FE /* QuestionnaireResponse.swift in Sources */,
+				32F92B22282C4A0400F611FE /* Coverage.swift in Sources */,
+				32F92B5C282C4A0500F611FE /* Person.swift in Sources */,
+				32F92B2E282C4A0500F611FE /* Media.swift in Sources */,
+				32F92B82282C4A0500F611FE /* Provenance.swift in Sources */,
+				32F92AFE282C4A0400F611FE /* MedicinalProduct.swift in Sources */,
 				B4FA937A2220F63100BD72A1 /* PatientListQuery.swift in Sources */,
+				32F92AC8282C4A0400F611FE /* MedicinalProductManufactured.swift in Sources */,
+				32F92B4A282C4A0500F611FE /* ImmunizationEvaluation.swift in Sources */,
+				32F92BC4282C4A9E00F611FE /* OAuth2Base.swift in Sources */,
+				32F92AFF282C4A0400F611FE /* PaymentNotice.swift in Sources */,
+				32F92AC5282C4A0400F611FE /* List.swift in Sources */,
+				32F92AD4282C4A0400F611FE /* Signature.swift in Sources */,
+				32F92ACC282C4A0400F611FE /* Schedule.swift in Sources */,
+				32F92BA6282C4A6F00F611FE /* Keychain.swift in Sources */,
+				32F92B72282C4A0500F611FE /* MeasureReport.swift in Sources */,
+				32F92B01282C4A0400F611FE /* DocumentManifest.swift in Sources */,
+				32F92B96282C4A3100F611FE /* Patient+SMART.swift in Sources */,
+				32F92B3D282C4A0500F611FE /* FHIRString.swift in Sources */,
+				32F92B35282C4A0500F611FE /* RequestGroup.swift in Sources */,
+				32F92B9E282C4A3100F611FE /* Resource+REST.swift in Sources */,
+				32F92BA1282C4A3100F611FE /* FHIRSearch.swift in Sources */,
+				32F92B55282C4A0500F611FE /* DeviceDefinition.swift in Sources */,
 				B4FA937B2220F63100BD72A1 /* Auth+iOS.swift in Sources */,
+				32F92B3F282C4A0500F611FE /* Contract.swift in Sources */,
+				32F92ADC282C4A0400F611FE /* MedicinalProductUndesirableEffect.swift in Sources */,
+				32F92ADF282C4A0400F611FE /* Resource+Meta.swift in Sources */,
+				32F92ACF282C4A0400F611FE /* Claim.swift in Sources */,
+				32F92B50282C4A0500F611FE /* FHIRAbstractResource.swift in Sources */,
+				32F92B80282C4A0500F611FE /* Slot.swift in Sources */,
+				32F92B60282C4A0500F611FE /* MessageDefinition.swift in Sources */,
+				32F92B7B282C4A0500F611FE /* SubstanceProtein.swift in Sources */,
+				32F92B81282C4A0500F611FE /* GraphDefinition.swift in Sources */,
+				32F92AE9282C4A0400F611FE /* FHIRValidationError.swift in Sources */,
+				32F92B57282C4A0500F611FE /* PaymentReconciliation.swift in Sources */,
+				32F92B64282C4A0500F611FE /* SearchParameter.swift in Sources */,
+				32F92BB9282C4A9E00F611FE /* OAuth2AuthConfig.swift in Sources */,
+				32F92AE2282C4A0400F611FE /* Population.swift in Sources */,
+				32F92AB4282C4A0400F611FE /* CoverageEligibilityResponse.swift in Sources */,
+				32F92ABF282C4A0400F611FE /* MedicationAdministration.swift in Sources */,
+				32F92B46282C4A0500F611FE /* ClaimResponse.swift in Sources */,
+				32F92BBA282C4A9E00F611FE /* OAuth2ClientConfig.swift in Sources */,
+				32F92BDD282C4AB100F611FE /* OAuth2.swift in Sources */,
+				32F92B0D282C4A0400F611FE /* SubstancePolymer.swift in Sources */,
+				32F92AC0282C4A0400F611FE /* SubstanceSourceMaterial.swift in Sources */,
+				32F92B4C282C4A0500F611FE /* Identifier.swift in Sources */,
+				32F92B10282C4A0400F611FE /* FHIRURL.swift in Sources */,
+				32F92B7E282C4A0500F611FE /* Linkage.swift in Sources */,
+				32F92B15282C4A0400F611FE /* GuidanceResponse.swift in Sources */,
+				32F92B85282C4A0500F611FE /* MedicinalProductIndication.swift in Sources */,
+				32F92B84282C4A0500F611FE /* Bundle.swift in Sources */,
 				B4FA937C2220F63100BD72A1 /* PatientList+iOS.swift in Sources */,
-				B4BC3F8D2328240C0097F26D /* SMART.swift in Sources */,
+				32F92BB8282C4A9E00F611FE /* OAuth2RequestPerformer.swift in Sources */,
+				32F92B1D282C4A0400F611FE /* EvidenceVariable.swift in Sources */,
+				32F92AD8282C4A0400F611FE /* Dosage.swift in Sources */,
+				32F92B6B282C4A0500F611FE /* MedicationDispense.swift in Sources */,
+				32F92B83282C4A0500F611FE /* ExplanationOfBenefit.swift in Sources */,
+				32F92AF6282C4A0400F611FE /* Money.swift in Sources */,
+				32F92B36282C4A0500F611FE /* EpisodeOfCare.swift in Sources */,
+				32F92BD2282C4AB100F611FE /* OAuth2CodeGrantNoTokenType.swift in Sources */,
+				32F92B4D282C4A0500F611FE /* MedicinalProductIngredient.swift in Sources */,
+				32F92AD9282C4A0400F611FE /* ResearchElementDefinition.swift in Sources */,
+				32F92B6C282C4A0500F611FE /* AuditEvent.swift in Sources */,
+				32F92AEE282C4A0400F611FE /* Address.swift in Sources */,
+				32F92B2C282C4A0500F611FE /* Coding.swift in Sources */,
+				32F92AB9282C4A0400F611FE /* AllergyIntolerance.swift in Sources */,
+				32F92ADE282C4A0400F611FE /* ValueSet.swift in Sources */,
+				32F92B0B282C4A0400F611FE /* Task.swift in Sources */,
+				32F92B06282C4A0400F611FE /* Group.swift in Sources */,
+				32F92AC4282C4A0400F611FE /* DocumentReference.swift in Sources */,
+				32F92AEF282C4A0400F611FE /* Substance.swift in Sources */,
+				32F92B3A282C4A0500F611FE /* SpecimenDefinition.swift in Sources */,
+				32F92AFC282C4A0400F611FE /* FHIRPrimitive.swift in Sources */,
+				32F92AF9282C4A0400F611FE /* NutritionOrder.swift in Sources */,
+				32F92ABE282C4A0400F611FE /* Communication.swift in Sources */,
+				32F92BDA282C4AB100F611FE /* OAuth2CodeGrantBasicAuth.swift in Sources */,
+				32F92B3B282C4A0500F611FE /* BodyStructure.swift in Sources */,
+				32F92AF4282C4A0400F611FE /* RiskAssessment.swift in Sources */,
+				32F92BDC282C4AB100F611FE /* OAuth2CodeGrantLinkedIn.swift in Sources */,
+				32F92B42282C4A0500F611FE /* ParameterDefinition.swift in Sources */,
+				32F92B1A282C4A0400F611FE /* SubstanceNucleicAcid.swift in Sources */,
+				32F92B9F282C4A3100F611FE /* FHIRString+Localization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,7 +1468,6 @@
 				B4FA93B02221013900BD72A1 /* PatientListOrder.swift in Sources */,
 				B4BC3F8E2328240C0097F26D /* SMART.swift in Sources */,
 				B4FA93B12221013900BD72A1 /* PatientListQuery.swift in Sources */,
-				B4FA93B22221013900BD72A1 /* Auth+macOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,10 +1502,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@loader_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.chip.${PRODUCT_NAME:rfc1034identifier}";
@@ -536,17 +1521,13 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@loader_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.chip.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -562,11 +1543,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-DDEBUG -DNO_MODEL_IMPORT -DNO_MODULE_IMPORT -DNO_KEYCHAIN_IMPORT";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.chip.${PRODUCT_NAME:rfc1034identifier}";
@@ -591,18 +1568,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-DNO_MODEL_IMPORT -DNO_KEYCHAIN_IMPORT -DNO_MODULE_IMPORT";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.chip.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = SMART;
 				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -616,10 +1588,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.chip.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -634,15 +1603,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.chip.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -766,11 +1731,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-DDEBUG -DNO_MODULE_IMPORT -DNO_MODEL_IMPORT -DNO_KEYCHAIN_IMPORT";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.chip.${PRODUCT_NAME:rfc1034identifier}";
@@ -796,19 +1757,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-DNO_MODEL_IMPORT -DNO_KEYCHAIN_IMPORT -DNO_MODULE_IMPORT";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.chip.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = SMART;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -865,48 +1821,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B450BD1F232D96B800BA3D89 /* XCRemoteSwiftPackageReference "OAuth2" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/p2/OAuth2.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.1.0;
-			};
-		};
-		B4BC3FA1232954E90097F26D /* XCRemoteSwiftPackageReference "Swift-FHIR" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/smart-on-fhir/Swift-FHIR.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.2.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B450BD20232D96B800BA3D89 /* OAuth2 */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B450BD1F232D96B800BA3D89 /* XCRemoteSwiftPackageReference "OAuth2" */;
-			productName = OAuth2;
-		};
-		B450BD22232D96E100BA3D89 /* OAuth2 */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B450BD1F232D96B800BA3D89 /* XCRemoteSwiftPackageReference "OAuth2" */;
-			productName = OAuth2;
-		};
-		B4BC3FA2232954E90097F26D /* FHIR */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B4BC3FA1232954E90097F26D /* XCRemoteSwiftPackageReference "Swift-FHIR" */;
-			productName = FHIR;
-		};
-		B4BC3FA4232954FB0097F26D /* FHIR */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B4BC3FA1232954E90097F26D /* XCRemoteSwiftPackageReference "Swift-FHIR" */;
-			productName = FHIR;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EE55C2611948906000849670 /* Project object */;
 }

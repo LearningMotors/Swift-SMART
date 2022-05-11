@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
     s.license      = "Apache 2"
     s.author       = { "Pascal Pfiffner" => "phase.of.matter@gmail.com" }
   
-    s.source            = { :git => "https://github.com/smart-on-fhir/Swift-SMART.git", :tag => "#{s.version}", :submodules => true }
+    s.source            = { :git => "https://github.com/LearningMotors/Swift-SMART.git" }
     s.prepare_command   = "git submodule update --init --recursive"  # The :submodules flag above is not recursive :P
   
     s.ios.deployment_target = "11.0"
@@ -52,6 +52,4 @@ Pod::Spec.new do |s|
                               "OAuth2/Sources/Flows/*.swift"
     s.ios.source_files      = "Sources/iOS/*.swift",
                               "OAuth2/Sources/iOS/*.swift"
-    s.osx.source_files      = "Sources/macOS/*.swift",
-                              "OAuth2/Sources/macOS/*.swift"
 end
