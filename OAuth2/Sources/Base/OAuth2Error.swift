@@ -334,7 +334,6 @@ public enum OAuth2Error: Error, CustomStringConvertible, Equatable {
 
 
 public extension Error {
-	
 	/**
 	Convenience getter to easily retrieve an OAuth2Error from any Error.
 	*/
