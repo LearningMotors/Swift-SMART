@@ -2,7 +2,7 @@
 #  Swift-SMART
 #
 #  Swift SMART on FHIR framework for iOS and OS X
-#  Enjoy!
+#  Enjoy.
 #
 
 Pod::Spec.new do |s|
