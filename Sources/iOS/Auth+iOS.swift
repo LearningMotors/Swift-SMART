@@ -20,7 +20,7 @@ extension Auth {
 	- parameter callback:   The callback that is called when authorization completes or fails
 	*/
 	func authorize(with oauth: OAuth2, properties: SMARTAuthProperties, callback: @escaping ((OAuth2JSON?, OAuth2Error?) -> Void)) {
-		authContext = UIApplication.shared.keyWindow?.rootViewController
+		authContext = UIApplication.shared.windows.first(where: \.isKeyWindow)?.rootViewController
 		
 		oauth.authConfig.authorizeContext = authContext
 		oauth.authConfig.authorizeEmbedded = properties.embedded
@@ -42,7 +42,7 @@ extension Auth {
 	- parameter withParameters: Additional authorization parameters to pass through
 	*/
 	func showPatientList(withParameters parameters: OAuth2JSON) {
-		guard let root = authContext as? UIViewController ?? UIApplication.shared.keyWindow?.rootViewController else {
+		guard let root = authContext as? UIViewController ?? UIApplication.shared.windows.first(where: \.isKeyWindow)?.rootViewController else {
 			authDidFail(withError: OAuth2Error.invalidAuthorizationContext)
 			return
 		}

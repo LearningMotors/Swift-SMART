@@ -113,10 +113,9 @@ extension FHIRBool: Equatable, Hashable {
 	public static func ==(l: FHIRBool, r: Bool) -> Bool {
 		return l.bool == r
 	}
-	
-	
-	public var hashValue: Int {
-        return bool.hashValue
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(bool)
     }
 }
 
