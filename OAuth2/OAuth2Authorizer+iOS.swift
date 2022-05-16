@@ -51,12 +51,13 @@ open class OAuth2Authorizer: OAuth2AuthorizerUI {
 	Uses `UIApplication` to open the authorize URL in iOS's browser.
 	
 	- parameter url: The authorize URL to open
-	- throws: UnableToOpenAuthorizeURL on failure
+	- throws: UnableToOpenAuthorizeURL if unable to open URL
 	*/
 	public func openAuthorizeURLInBrowser(_ url: URL) throws {
-		
 		#if !P2_APP_EXTENSIONS
-		if !UIApplication.shared.openURL(url) {
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
 			throw OAuth2Error.unableToOpenAuthorizeURL
 		}
 		#else

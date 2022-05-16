@@ -38,7 +38,7 @@ open class PatientListViewController: UITableViewController {
 		}
 	}
 	
-	lazy var activity = UIActivityIndicatorView(style: .gray)
+	lazy var activity = UIActivityIndicatorView(style: .medium)
 	
 	weak var headerLabel: UILabel?
 	
