@@ -76,7 +76,7 @@ open class OAuth2Authorizer: OAuth2AuthorizerUI {
 		guard let controller = config.authorizeContext as? UIViewController else {
 			throw (nil == config.authorizeContext) ? OAuth2Error.noAuthorizationContext : OAuth2Error.invalidAuthorizationContext
 		}
-		
+		// This is an test comment
 		if #available(iOS 9, *), config.ui.useSafariView {
 			let web = try authorizeSafariEmbedded(from: controller, at: url)
 			if config.authorizeEmbeddedAutoDismiss {
