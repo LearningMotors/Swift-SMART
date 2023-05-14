@@ -76,8 +76,8 @@ open class OAuth2Authorizer: OAuth2AuthorizerUI {
 		guard let controller = config.authorizeContext as? UIViewController else {
 			throw (nil == config.authorizeContext) ? OAuth2Error.noAuthorizationContext : OAuth2Error.invalidAuthorizationContext
 		}
-		// This is an test comment
-		if #available(iOS 9, *), config.ui.useSafariView {
+        let shouldUseWKWebViewForEmrLogin = UserDefaults.standard.bool(forKey: "USE_WKWEBVIEW_FOR_EMRLOGIN")
+		if #available(iOS 9, *), config.ui.useSafariView, !shouldUseWKWebViewForEmrLogin {
 			let web = try authorizeSafariEmbedded(from: controller, at: url)
 			if config.authorizeEmbeddedAutoDismiss {
 				oauth2.internalAfterAuthorizeOrFail = { wasFailure, error in
