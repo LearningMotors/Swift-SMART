@@ -182,11 +182,11 @@ open class OAuth2: OAuth2Base {
 	                      access token is present
 	*/
 	open func tryToObtainAccessTokenIfNeeded(params: OAuth2StringDict? = nil, callback: @escaping ((OAuth2JSON?, OAuth2Error?) -> Void)) {
-		if hasUnexpiredAccessToken() {
-			logger?.debug("OAuth2", msg: "Have an apparently unexpired access token")
-			callback(OAuth2JSON(), nil)
-		}
-		else {
+//		if hasUnexpiredAccessToken() {
+//			logger?.debug("OAuth2", msg: "Have an apparently unexpired access token")
+//			callback(OAuth2JSON(), nil)
+//		}
+//		else {
 			logger?.debug("OAuth2", msg: "No access token, checking if a refresh token is available")
 			doRefreshToken(params: params) { successParams, error in
 				if let successParams = successParams {
@@ -206,7 +206,7 @@ open class OAuth2: OAuth2Base {
 					callback(nil, returnedError)
 				}
 			}
-		}
+//		}
 	}
 	
 	/**

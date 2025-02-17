@@ -184,15 +184,15 @@ class Auth {
 		
 		// authorization via OAuth2
 		if let oa = oauth {
-			if oa.hasUnexpiredAccessToken() {
-				if properties.granularity != .patientSelectWeb {
-					server.logger?.debug("SMART", msg: "Have an unexpired access token and don't need web patient selection: not requesting a new token")
-					authDidSucceed(withParameters: OAuth2JSON(minimumCapacity: 0))
-					return
-				}
-				server.logger?.debug("SMART", msg: "Have an unexpired access token but want web patient selection: starting auth flow")
-				oa.forgetTokens()
-			}
+//			if oa.hasUnexpiredAccessToken() {
+//				if properties.granularity != .patientSelectWeb {
+//					server.logger?.debug("SMART", msg: "Have an unexpired access token and don't need web patient selection: not requesting a new token")
+//					authDidSucceed(withParameters: OAuth2JSON(minimumCapacity: 0))
+//					return
+//				}
+//				server.logger?.debug("SMART", msg: "Have an unexpired access token but want web patient selection: starting auth flow")
+//				oa.forgetTokens()
+//			}
 			
 			// adjust the scope for desired auth properties
 			var scope = oa.scope ?? "user/*.* openid profile"		// plus "launch" or "launch/patient", if needed
