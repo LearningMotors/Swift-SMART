@@ -182,6 +182,7 @@ open class OAuth2: OAuth2Base {
 	                      access token is present
 	*/
 	open func tryToObtainAccessTokenIfNeeded(params: OAuth2StringDict? = nil, callback: @escaping ((OAuth2JSON?, OAuth2Error?) -> Void)) {
+        /// Commented below condition to make sure that we always refresh the token
 //		if hasUnexpiredAccessToken() {
 //			logger?.debug("OAuth2", msg: "Have an apparently unexpired access token")
 //			callback(OAuth2JSON(), nil)

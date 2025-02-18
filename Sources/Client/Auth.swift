@@ -184,6 +184,7 @@ class Auth {
 		
 		// authorization via OAuth2
 		if let oa = oauth {
+            /// Commented below condition to make sure that we always refresh the token
 //			if oa.hasUnexpiredAccessToken() {
 //				if properties.granularity != .patientSelectWeb {
 //					server.logger?.debug("SMART", msg: "Have an unexpired access token and don't need web patient selection: not requesting a new token")
