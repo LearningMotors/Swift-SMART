@@ -179,6 +179,9 @@ open class OAuth2Base: OAuth2Securable {
 		if let ttl = settings["title"] as? String {
 			authConfig.ui.title = ttl
 		}
+        if let useSafariView = settings["use_safari_view"] as? Bool {
+            authConfig.ui.useSafariView = useSafariView
+        }
 		super.init(settings: settings)
 	}
 	

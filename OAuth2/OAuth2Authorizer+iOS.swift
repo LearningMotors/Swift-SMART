@@ -72,29 +72,27 @@ open class OAuth2Authorizer: OAuth2AuthorizerUI {
 	- parameter with: The configuration to be used; usually uses the instance's `authConfig`
 	- parameter at:   The authorize URL to open
 	*/
-	public func authorizeEmbedded(with config: OAuth2AuthConfig, at url: URL) throws {
-		guard let controller = config.authorizeContext as? UIViewController else {
-			throw (nil == config.authorizeContext) ? OAuth2Error.noAuthorizationContext : OAuth2Error.invalidAuthorizationContext
-		}
-        /*
-		if #available(iOS 9, *), config.ui.useSafariView {
-			let web = try authorizeSafariEmbedded(from: controller, at: url)
-			if config.authorizeEmbeddedAutoDismiss {
-				oauth2.internalAfterAuthorizeOrFail = { wasFailure, error in
-					web.dismiss(animated: true)
-				}
-			}
-		}
-		else {
-         */
-			let web = try authorizeEmbedded(from: controller, at: url)
-			if config.authorizeEmbeddedAutoDismiss {
-				oauth2.internalAfterAuthorizeOrFail = { wasFailure, error in
-					web.dismiss(animated: true)
-				}
-			}
-//		}
-	}
+    public func authorizeEmbedded(with config: OAuth2AuthConfig, at url: URL) throws {
+        guard let controller = config.authorizeContext as? UIViewController else {
+            throw (nil == config.authorizeContext) ? OAuth2Error.noAuthorizationContext : OAuth2Error.invalidAuthorizationContext
+        }
+
+        if config.ui.useSafariView {
+            let web = try authorizeSafariEmbedded(from: controller, at: url)
+            if config.authorizeEmbeddedAutoDismiss {
+                oauth2.internalAfterAuthorizeOrFail = { wasFailure, error in
+                    web.dismiss(animated: true)
+                }
+            }
+        } else {
+            let web = try authorizeEmbedded(from: controller, at: url)
+            if config.authorizeEmbeddedAutoDismiss {
+                oauth2.internalAfterAuthorizeOrFail = { wasFailure, error in
+                    web.dismiss(animated: true)
+                }
+            }
+        }
+    }
 	
 	/**
 	Called with the view- and (possibly) navigation-controller that is about to be presented. Useful for subclasses, default implementation
