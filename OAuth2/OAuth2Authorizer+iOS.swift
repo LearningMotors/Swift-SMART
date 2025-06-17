@@ -19,6 +19,7 @@
 //
 #if os(iOS)
 
+import AuthenticationServices
 import UIKit
 import SafariServices
 #if !NO_MODULE_IMPORT
@@ -31,13 +32,15 @@ This authorizer takes care of iOS-specific tasks when showing the authorization 
 
 You can subclass this class and override `willPresent(viewController:naviController:)` in order to further customize presentation of the UI.
 */
-open class OAuth2Authorizer: OAuth2AuthorizerUI {
+open class OAuth2Authorizer: NSObject, OAuth2AuthorizerUI, ASWebAuthenticationPresentationContextProviding {
 	
 	/// The OAuth2 instance this authorizer belongs to.
 	public unowned let oauth2: OAuth2Base
 	
 	/// Used to store the `SFSafariViewControllerDelegate`.
 	private var safariViewDelegate: AnyObject?
+    
+    private var currentController: UIViewController!
 	
 	
 	public init(oauth2: OAuth2) {
@@ -76,14 +79,11 @@ open class OAuth2Authorizer: OAuth2AuthorizerUI {
         guard let controller = config.authorizeContext as? UIViewController else {
             throw (nil == config.authorizeContext) ? OAuth2Error.noAuthorizationContext : OAuth2Error.invalidAuthorizationContext
         }
+        
+        currentController = controller
 
         if config.ui.useSafariView {
-            let web = try authorizeSafariEmbedded(from: controller, at: url)
-            if config.authorizeEmbeddedAutoDismiss {
-                oauth2.internalAfterAuthorizeOrFail = { wasFailure, error in
-                    web.dismiss(animated: true)
-                }
-            }
+            _ = try authorizeASWebAuthenticationSession(at: url)
         } else {
             let web = try authorizeEmbedded(from: controller, at: url)
             if config.authorizeEmbeddedAutoDismiss {
@@ -103,6 +103,39 @@ open class OAuth2Authorizer: OAuth2AuthorizerUI {
 	*/
 	open func willPresent(viewController: UIViewController, in naviController: UINavigationController?) {
 	}
+    
+    // MARK: - ASWebAuthenticationSession
+    
+    @available(iOS 12.0, *)
+    @discardableResult
+    public func authorizeASWebAuthenticationSession(at url: URL) throws -> ASWebAuthenticationSession {
+        guard let redirect = oauth2.redirect, let redirectURL = URL(string: redirect) else {
+            throw OAuth2Error.noRedirectURL
+        }
+        let session = ASWebAuthenticationSession(
+            url: url,
+            callbackURLScheme: redirectURL.scheme
+        ) { callbackURL, error in
+            if let callbackURL = callbackURL {
+                do {
+                    try self.oauth2.handleRedirectURL(callbackURL)
+                } catch {
+                    self.oauth2.logger?.warn("OAuth2", msg: "Failed to handle redirect: \(error)")
+                    self.oauth2.didFail(with: nil)
+                }
+            } else {
+                self.oauth2.didFail(with: nil)
+            }
+        }
+        session.presentationContextProvider = self
+        session.prefersEphemeralWebBrowserSession = true
+        session.start()
+        return session
+    }
+    
+    public func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
+        return currentController.view.window!
+    }
 	
 	
 	// MARK: - Safari Web View Controller
