@@ -29,7 +29,7 @@ import Base
 /**
 A simple iOS web view controller that allows you to display the login/authorization screen.
 */
-open class OAuth2WebViewController: UIViewController, WKNavigationDelegate {
+open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
 	
 	/// Handle to the OAuth2 instance in play, only used for debug lugging at this time.
 	var oauth: OAuth2?
@@ -84,6 +84,13 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate {
 	
 	/// Our web view.
 	var webView: WKWebView?
+
+	/// Suppresses a second load or external open when both `decidePolicyFor` and
+	/// `createWebViewWith` see the same popup navigation.
+	private var lastHandledPopup: (url: URL, at: Date)?
+
+	/// Remembers whether the redirect was consumed, so the second delegate call cancels too.
+	private var lastIntercept: (url: URL, at: Date, cancel: Bool)?
 	
 	/// An overlay view containing a spinner.
 	var loadingView: UIView?
@@ -116,6 +123,7 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate {
 		web.translatesAutoresizingMaskIntoConstraints = false
 		web.scrollView.decelerationRate = UIScrollView.DecelerationRate.normal
 		web.navigationDelegate = self
+		web.uiDelegate = self
 		
 		view.addSubview(web)
 		let views = ["web": web]
@@ -191,27 +199,88 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate {
 	// MARK: - Web View Delegate
 	
 	open func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Swift.Void) {
-		guard let onIntercept = onIntercept else {
-			decisionHandler(.allow)
-			return
-		}
-		let request = navigationAction.request
-		
-		// we compare the scheme and host first, then check the path (if there is any). Not sure if a simple string comparison
-		// would work as there may be URL parameters attached
-		if let url = request.url, url.scheme == interceptComponents?.scheme && url.host == interceptComponents?.host {
-			let haveComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
-			if let hp = haveComponents?.path, let ip = interceptComponents?.path, hp == ip || ("/" == hp + ip) {
-				if onIntercept(url) {
-					decisionHandler(.cancel)
-				}
-				else {
-					decisionHandler(.allow)
-				}
+		let decision = OAuth2EmbeddedNavigationPolicy.decide(
+			url: navigationAction.request.url,
+			targetFrameIsNil: navigationAction.targetFrame == nil,
+			intercept: interceptComponents
+		)
+		switch decision {
+		case .intercept:
+			guard let url = navigationAction.request.url, let onIntercept = onIntercept else {
+				decisionHandler(.allow)
 				return
 			}
+			if interceptDecision(for: url, onIntercept: onIntercept) {
+				decisionHandler(.cancel)
+			}
+			else {
+				decisionHandler(.allow)
+			}
+		case .openExternally:
+			if let url = navigationAction.request.url, claimPopup(url) {
+				openExternally(url)
+			}
+			decisionHandler(.cancel)
+		case .loadInCurrentWebView:
+			decisionHandler(.cancel)
+			if let url = navigationAction.request.url, claimPopup(url) {
+				webView.load(navigationAction.request)
+			}
+		case .allow:
+			decisionHandler(.allow)
 		}
-		decisionHandler(.allow)
+	}
+
+	/// `window.open` does not load when this returns nil unless the request is loaded here.
+	open func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+		let decision = OAuth2EmbeddedNavigationPolicy.decide(
+			url: navigationAction.request.url,
+			targetFrameIsNil: true,
+			intercept: interceptComponents
+		)
+		switch decision {
+		case .intercept:
+			if let url = navigationAction.request.url, let onIntercept = onIntercept {
+				_ = interceptDecision(for: url, onIntercept: onIntercept)
+			}
+		case .openExternally:
+			if let url = navigationAction.request.url, claimPopup(url) {
+				openExternally(url)
+			}
+		case .loadInCurrentWebView:
+			if let url = navigationAction.request.url, claimPopup(url) {
+				webView.load(navigationAction.request)
+			}
+		case .allow:
+			break
+		}
+		return nil
+	}
+
+	/// True when the redirect should be canceled. Calls `onIntercept` once per URL.
+	private func interceptDecision(for url: URL, onIntercept: (URL) -> Bool) -> Bool {
+		if let last = lastIntercept, last.url == url, Date().timeIntervalSince(last.at) < 1 {
+			return last.cancel
+		}
+		let cancel = onIntercept(url)
+		lastIntercept = (url, Date(), cancel)
+		return cancel
+	}
+
+	/// True the first time `url` is handled within a short window. The second delegate
+	/// call for the same popup must not load or open the external app again.
+	private func claimPopup(_ url: URL) -> Bool {
+		if let last = lastHandledPopup, last.url == url, Date().timeIntervalSince(last.at) < 1 {
+			return false
+		}
+		lastHandledPopup = (url, Date())
+		return true
+	}
+
+	private func openExternally(_ url: URL) {
+		#if !P2_APP_EXTENSIONS
+		UIApplication.shared.open(url, options: [:], completionHandler: nil)
+		#endif
 	}
 	
 	open func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
