@@ -89,4 +89,18 @@ enum OAuth2EmbeddedNavigationPolicy {
 			return true
 		}
 	}
+
+	/// Scheme, host, and path only. Query and fragment can carry the OAuth code.
+	static func redacted(_ url: URL?) -> String {
+		guard let url = url else {
+			return "nil"
+		}
+		let scheme = url.scheme ?? "nil"
+		let host = url.host ?? ""
+		let path = url.path
+		if host.isEmpty {
+			return path.isEmpty ? scheme : "\(scheme):\(path)"
+		}
+		return "\(scheme)://\(host)\(path)"
+	}
 }

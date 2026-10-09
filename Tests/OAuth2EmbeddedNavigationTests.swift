@@ -45,6 +45,12 @@ class OAuth2EmbeddedNavigationTests: XCTestCase {
 		XCTAssertEqual(decision, .openExternally)
 	}
 
+	func testLogURLOmitsTheOAuthQuery() {
+		let url = URL(string: "https://epicproxy.example.com/oauth/callback?code=secret&state=abc")!
+		let redacted = OAuth2EmbeddedNavigationPolicy.redacted(url)
+		XCTAssertEqual(redacted, "https://epicproxy.example.com/oauth/callback")
+		XCTAssertFalse(redacted.contains("secret"))
+	}
 	func testAboutBlankInTheCurrentFrameStaysThere() {
 		let url = URL(string: "about:blank")!
 		let decision = OAuth2EmbeddedNavigationPolicy.decide(url: url, targetFrameIsNil: false, intercept: redirect)

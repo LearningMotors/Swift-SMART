@@ -266,6 +266,7 @@
 		32F92BE3282C4ACD00F611FE /* OAuth2Authorizer+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BE0282C4ACD00F611FE /* OAuth2Authorizer+iOS.swift */; };
 		32F92BE4282C4ACD00F611FE /* OAuth2WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F92BE1282C4ACD00F611FE /* OAuth2WebViewController.swift */; };
 		A7E1C0DE2EB0D640008C8702 /* OAuth2EmbeddedNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E1C0DE2EB0D640008C8701 /* OAuth2EmbeddedNavigation.swift */; };
+		A7E1C0DE2EB0D640008C8706 /* SMARTServerLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E1C0DE2EB0D640008C8705 /* SMARTServerLog.swift */; };
 		A7E1C0DE2EB0D640008C8704 /* OAuth2EmbeddedNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E1C0DE2EB0D640008C8703 /* OAuth2EmbeddedNavigationTests.swift */; };
 		B4081C27222B0030005A1CFE /* CONTRIBUTORS.md in Resources */ = {isa = PBXBuildFile; fileRef = B4081C26222B0030005A1CFE /* CONTRIBUTORS.md */; };
 		B4FA93752220F63100BD72A1 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43B1C319546DB20017679A /* Client.swift */; };
@@ -560,6 +561,7 @@
 		32F92BE0282C4ACD00F611FE /* OAuth2Authorizer+iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OAuth2Authorizer+iOS.swift"; sourceTree = "<group>"; };
 		32F92BE1282C4ACD00F611FE /* OAuth2WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2WebViewController.swift; sourceTree = "<group>"; };
 		A7E1C0DE2EB0D640008C8701 /* OAuth2EmbeddedNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2EmbeddedNavigation.swift; sourceTree = "<group>"; };
+		A7E1C0DE2EB0D640008C8705 /* SMARTServerLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMARTServerLog.swift; sourceTree = "<group>"; };
 		A7E1C0DE2EB0D640008C8703 /* OAuth2EmbeddedNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2EmbeddedNavigationTests.swift; sourceTree = "<group>"; };
 		B4081C26222B0030005A1CFE /* CONTRIBUTORS.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTORS.md; sourceTree = SOURCE_ROOT; };
 		B4BC3F8C2328240C0097F26D /* SMART.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SMART.swift; path = Sources/SMART/SMART.swift; sourceTree = "<group>"; };
@@ -640,6 +642,7 @@
 				32F92BB3282C4A9D00F611FE /* OAuth2Securable.swift */,
 				32F92BE1282C4ACD00F611FE /* OAuth2WebViewController.swift */,
 				A7E1C0DE2EB0D640008C8701 /* OAuth2EmbeddedNavigation.swift */,
+				A7E1C0DE2EB0D640008C8705 /* SMARTServerLog.swift */,
 			);
 			path = OAuth2;
 			sourceTree = "<group>";
@@ -1114,6 +1117,7 @@
 				32F92AE3282C4A0400F611FE /* OperationOutcome.swift in Sources */,
 				32F92BE4282C4ACD00F611FE /* OAuth2WebViewController.swift in Sources */,
 				A7E1C0DE2EB0D640008C8702 /* OAuth2EmbeddedNavigation.swift in Sources */,
+				A7E1C0DE2EB0D640008C8706 /* SMARTServerLog.swift in Sources */,
 				32F92AF0282C4A0400F611FE /* HumanName.swift in Sources */,
 				32F92ABD282C4A0400F611FE /* Measure.swift in Sources */,
 				32F92B4F282C4A0500F611FE /* CapabilityStatement.swift in Sources */,

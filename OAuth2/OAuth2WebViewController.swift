@@ -146,6 +146,7 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 			return
 		}
 		didStartInitialLoad = true
+		trace("login web view appeared url=\(OAuth2EmbeddedNavigationPolicy.redacted(startURL))")
 		
 		if let web = webView, !web.canGoBack {
 			if nil != startURL {
@@ -199,6 +200,7 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 	}
 	
 	func dismiss(asCancel: Bool, animated: Bool, completion: (() -> Void)? = nil) {
+		trace("login sheet dismissed cancel=\(asCancel) popups=\(popups.count)", level: asCancel ? SMARTServerLog.warn : SMARTServerLog.info)
 		popups.forEach { $0.popupWebView.stopLoading() }
 		popups.removeAll()
 		webView?.stopLoading()
@@ -224,6 +226,7 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 				decisionHandler(.allow)
 				return
 			}
+			trace(navigationSummary("redirect intercepted", action: navigationAction, webView: webView))
 			if interceptDecision(for: url, onIntercept: onIntercept) {
 				decisionHandler(.cancel)
 			}
@@ -231,6 +234,7 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 				decisionHandler(.allow)
 			}
 		case .openExternally:
+			trace(navigationSummary("open externally", action: navigationAction, webView: webView), level: SMARTServerLog.warn)
 			if let url = navigationAction.request.url, claimPopup(url) {
 				openExternally(url)
 			}
@@ -238,6 +242,7 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 		case .presentPopup:
 			// WebKit loads this request in the web view returned from `createWebViewWith`.
 			// Allowing it here does not navigate the login page. Loading it here would.
+			trace(navigationSummary("present popup", action: navigationAction, webView: webView))
 			decisionHandler(.allow)
 		case .allow:
 			decisionHandler(.allow)
@@ -254,16 +259,19 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 		)
 		switch decision {
 		case .intercept:
+			trace(navigationSummary("createWebView redirect", action: navigationAction, webView: webView))
 			if let url = navigationAction.request.url, let onIntercept = onIntercept {
 				_ = interceptDecision(for: url, onIntercept: onIntercept)
 			}
 			return nil
 		case .openExternally:
+			trace(navigationSummary("createWebView external", action: navigationAction, webView: webView), level: SMARTServerLog.warn)
 			if let url = navigationAction.request.url, claimPopup(url) {
 				openExternally(url)
 			}
 			return nil
 		case .presentPopup, .allow:
+			trace(navigationSummary("createWebView popup", action: navigationAction, webView: webView))
 			return makePopup(configuration: configuration, source: webView)
 		}
 	}
@@ -272,7 +280,7 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 		guard let host = popups.first(where: { $0.popupWebView == webView }) else {
 			return
 		}
-		closePopup(host)
+		closePopup(host, reason: "window.close")
 	}
 
 	private func makePopup(configuration: WKWebViewConfiguration, source: WKWebView) -> WKWebView {
@@ -286,15 +294,19 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 		let host = OAuth2PopupViewController(popupWebView: popup)
 		host.onClose = { [weak self, weak host] in
 			guard let self, let host else { return }
-			self.closePopup(host)
+			self.closePopup(host, reason: "close-button")
 		}
 		popups.append(host)
 		host.loadViewIfNeeded()
+		if navigationController == nil {
+			trace("popup not shown because the login web view has no navigation controller", level: SMARTServerLog.error)
+		}
 		navigationController?.pushViewController(host, animated: true)
 		return popup
 	}
 
-	private func closePopup(_ host: OAuth2PopupViewController) {
+	private func closePopup(_ host: OAuth2PopupViewController, reason: String) {
+		trace("popup closed reason=\(reason) url=\(OAuth2EmbeddedNavigationPolicy.redacted(host.popupWebView.url))")
 		host.popupWebView.stopLoading()
 		popups.removeAll { $0 === host }
 		guard let navigationController = navigationController else {
@@ -334,6 +346,36 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 		UIApplication.shared.open(url, options: [:], completionHandler: nil)
 		#endif
 	}
+
+	private func trace(_ message: String, level: String = SMARTServerLog.info) {
+		SMARTServerLog.log(message, level: level)
+		oauth?.logger?.debug("OAuth2", msg: message)
+	}
+
+	private func navigationSummary(_ event: String, action: WKNavigationAction, webView: WKWebView) -> String {
+		let source = webView == self.webView ? "login" : "popup"
+		let target = action.targetFrame == nil ? "new-window" : "frame"
+		return "\(event) source=\(source) target=\(target) kind=\(navigationKind(action)) url=\(OAuth2EmbeddedNavigationPolicy.redacted(action.request.url))"
+	}
+
+	private func navigationKind(_ action: WKNavigationAction) -> String {
+		switch action.navigationType {
+		case .linkActivated:
+			return "link"
+		case .formSubmitted:
+			return "form"
+		case .backForward:
+			return "backForward"
+		case .reload:
+			return "reload"
+		case .formResubmitted:
+			return "formResubmitted"
+		case .other:
+			return "other"
+		@unknown default:
+			return "unknown"
+		}
+	}
 	
 	open func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
 		if "file" != webView.url?.scheme {
@@ -343,7 +385,10 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 	
 	open func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
 		if webView != self.webView {
-			if let title = webView.title, !title.isEmpty,
+			let title = webView.title ?? ""
+			let safeTitle = title.hasPrefix("Success ") ? "redacted" : title
+			trace("popup finished url=\(OAuth2EmbeddedNavigationPolicy.redacted(webView.url)) title=\(safeTitle)")
+			if !title.isEmpty, !title.hasPrefix("Success "),
 			   let host = popups.first(where: { $0.popupWebView == webView }) {
 				host.title = title
 			}
@@ -370,11 +415,18 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 		if NSURLErrorDomain == error._domain && NSURLErrorCancelled == error._code {
 			return
 		}
+		let source = webView == self.webView ? "login" : "popup"
+		let nsError = error as NSError
+		trace("navigation failed source=\(source) url=\(OAuth2EmbeddedNavigationPolicy.redacted(webView.url)) domain=\(nsError.domain) code=\(nsError.code)", level: SMARTServerLog.error)
 		// do we still need to intercept "WebKitErrorDomain" error 102?
 		
 		if nil != loadingView {
 			showErrorMessage(error.localizedDescription, animated: true)
 		}
+	}
+
+	open func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+		self.webView(webView, didFail: navigation, withError: error)
 	}
 }
 
