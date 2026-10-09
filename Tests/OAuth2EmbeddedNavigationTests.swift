@@ -16,10 +16,21 @@ class OAuth2EmbeddedNavigationTests: XCTestCase {
 		XCTAssertEqual(decision, .intercept)
 	}
 
-	func testAuthenticatorPopupLoadsInTheCurrentWebView() {
+	func testAuthenticatorPopupIsASecondWindow() {
 		let url = URL(string: "https://epicproxy.example.com/authenticator")!
 		let decision = OAuth2EmbeddedNavigationPolicy.decide(url: url, targetFrameIsNil: true, intercept: redirect)
-		XCTAssertEqual(decision, .loadInCurrentWebView)
+		XCTAssertEqual(decision, .presentPopup)
+	}
+
+	func testWindowOpenBlankIsASecondWindow() {
+		let url = URL(string: "about:blank")!
+		let decision = OAuth2EmbeddedNavigationPolicy.decide(url: url, targetFrameIsNil: true, intercept: redirect)
+		XCTAssertEqual(decision, .presentPopup)
+	}
+
+	func testWindowOpenWithoutURLIsASecondWindow() {
+		let decision = OAuth2EmbeddedNavigationPolicy.decide(url: nil, targetFrameIsNil: true, intercept: redirect)
+		XCTAssertEqual(decision, .presentPopup)
 	}
 
 	func testMainFrameWebNavigationIsAllowed() {
@@ -34,9 +45,9 @@ class OAuth2EmbeddedNavigationTests: XCTestCase {
 		XCTAssertEqual(decision, .openExternally)
 	}
 
-	func testAboutBlankStaysInTheWebView() {
+	func testAboutBlankInTheCurrentFrameStaysThere() {
 		let url = URL(string: "about:blank")!
-		let decision = OAuth2EmbeddedNavigationPolicy.decide(url: url, targetFrameIsNil: true, intercept: redirect)
+		let decision = OAuth2EmbeddedNavigationPolicy.decide(url: url, targetFrameIsNil: false, intercept: redirect)
 		XCTAssertEqual(decision, .allow)
 	}
 }

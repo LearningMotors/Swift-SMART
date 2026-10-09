@@ -85,12 +85,19 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 	/// Our web view.
 	var webView: WKWebView?
 
-	/// Suppresses a second load or external open when both `decidePolicyFor` and
-	/// `createWebViewWith` see the same popup navigation.
+	/// Suppresses a second external open when both `decidePolicyFor` and
+	/// `createWebViewWith` see the same custom-scheme navigation.
 	private var lastHandledPopup: (url: URL, at: Date)?
 
 	/// Remembers whether the redirect was consumed, so the second delegate call cancels too.
 	private var lastIntercept: (url: URL, at: Date, cancel: Bool)?
+
+	/// Second windows opened by the login page (`window.open`, `target=_blank`).
+	private var popups: [OAuth2PopupViewController] = []
+
+	/// The authorize URL is loaded once. A later appearance is a return from a popup,
+	/// and reloading here would wipe the Epic page the popup is talking to.
+	private var didStartInitialLoad = false
 	
 	/// An overlay view containing a spinner.
 	var loadingView: UIView?
@@ -117,6 +124,7 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 			cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(OAuth2WebViewController.cancel(_:)))
 			navigationItem.rightBarButtonItem = cancelButton
 		}
+		navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
 		
 		// create a web view
 		let web = WKWebView()
@@ -134,6 +142,10 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 	
 	override open func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+		if didStartInitialLoad {
+			return
+		}
+		didStartInitialLoad = true
 		
 		if let web = webView, !web.canGoBack {
 			if nil != startURL {
@@ -187,6 +199,8 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 	}
 	
 	func dismiss(asCancel: Bool, animated: Bool, completion: (() -> Void)? = nil) {
+		popups.forEach { $0.popupWebView.stopLoading() }
+		popups.removeAll()
 		webView?.stopLoading()
 		
 		if nil != self.onWillDismiss {
@@ -221,17 +235,17 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 				openExternally(url)
 			}
 			decisionHandler(.cancel)
-		case .loadInCurrentWebView:
-			decisionHandler(.cancel)
-			if let url = navigationAction.request.url, claimPopup(url) {
-				webView.load(navigationAction.request)
-			}
+		case .presentPopup:
+			// WebKit loads this request in the web view returned from `createWebViewWith`.
+			// Allowing it here does not navigate the login page. Loading it here would.
+			decisionHandler(.allow)
 		case .allow:
 			decisionHandler(.allow)
 		}
 	}
 
-	/// `window.open` does not load when this returns nil unless the request is loaded here.
+	/// WebKit loads `navigationAction` in the returned web view and sets `window.opener`
+	/// to the login page. The view must be created with `configuration`.
 	open func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
 		let decision = OAuth2EmbeddedNavigationPolicy.decide(
 			url: navigationAction.request.url,
@@ -243,18 +257,56 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 			if let url = navigationAction.request.url, let onIntercept = onIntercept {
 				_ = interceptDecision(for: url, onIntercept: onIntercept)
 			}
+			return nil
 		case .openExternally:
 			if let url = navigationAction.request.url, claimPopup(url) {
 				openExternally(url)
 			}
-		case .loadInCurrentWebView:
-			if let url = navigationAction.request.url, claimPopup(url) {
-				webView.load(navigationAction.request)
-			}
-		case .allow:
-			break
+			return nil
+		case .presentPopup, .allow:
+			return makePopup(configuration: configuration, source: webView)
 		}
-		return nil
+	}
+
+	open func webViewDidClose(_ webView: WKWebView) {
+		guard let host = popups.first(where: { $0.popupWebView == webView }) else {
+			return
+		}
+		closePopup(host)
+	}
+
+	private func makePopup(configuration: WKWebViewConfiguration, source: WKWebView) -> WKWebView {
+		let popup = WKWebView(frame: source.bounds, configuration: configuration)
+		popup.navigationDelegate = self
+		popup.uiDelegate = self
+		popup.allowsBackForwardNavigationGestures = true
+		if let agent = source.customUserAgent {
+			popup.customUserAgent = agent
+		}
+		let host = OAuth2PopupViewController(popupWebView: popup)
+		host.onClose = { [weak self, weak host] in
+			guard let self, let host else { return }
+			self.closePopup(host)
+		}
+		popups.append(host)
+		host.loadViewIfNeeded()
+		navigationController?.pushViewController(host, animated: true)
+		return popup
+	}
+
+	private func closePopup(_ host: OAuth2PopupViewController) {
+		host.popupWebView.stopLoading()
+		popups.removeAll { $0 === host }
+		guard let navigationController = navigationController else {
+			return
+		}
+		if navigationController.topViewController === host {
+			navigationController.popViewController(animated: true)
+			return
+		}
+		var stack = navigationController.viewControllers
+		stack.removeAll { $0 === host }
+		navigationController.setViewControllers(stack, animated: true)
 	}
 
 	/// True when the redirect should be canceled. Calls `onIntercept` once per URL.
@@ -268,7 +320,7 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 	}
 
 	/// True the first time `url` is handled within a short window. The second delegate
-	/// call for the same popup must not load or open the external app again.
+	/// call for the same custom scheme must not open the external app again.
 	private func claimPopup(_ url: URL) -> Bool {
 		if let last = lastHandledPopup, last.url == url, Date().timeIntervalSince(last.at) < 1 {
 			return false
@@ -290,6 +342,13 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 	}
 	
 	open func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+		if webView != self.webView {
+			if let title = webView.title, !title.isEmpty,
+			   let host = popups.first(where: { $0.popupWebView == webView }) {
+				host.title = title
+			}
+			return
+		}
 		if let scheme = interceptComponents?.scheme, "urn" == scheme {
 			if let path = interceptComponents?.path, path.hasPrefix("ietf:wg:oauth:2.0:oob") {
 				if let title = webView.title, title.hasPrefix("Success ") {
@@ -316,6 +375,49 @@ open class OAuth2WebViewController: UIViewController, WKNavigationDelegate, WKUI
 		if nil != loadingView {
 			showErrorMessage(error.localizedDescription, animated: true)
 		}
+	}
+}
+
+/// A second browsing context pushed over the login page. Closing it returns to that
+/// page; it does not cancel the OAuth session.
+final class OAuth2PopupViewController: UIViewController {
+	let popupWebView: WKWebView
+	var onClose: (() -> Void)?
+
+	init(popupWebView: WKWebView) {
+		self.popupWebView = popupWebView
+		super.init(nibName: nil, bundle: nil)
+	}
+
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+
+	override func loadView() {
+		let container = UIView()
+		container.backgroundColor = .white
+		popupWebView.translatesAutoresizingMaskIntoConstraints = false
+		container.addSubview(popupWebView)
+		NSLayoutConstraint.activate([
+			popupWebView.leadingAnchor.constraint(equalTo: container.leadingAnchor),
+			popupWebView.trailingAnchor.constraint(equalTo: container.trailingAnchor),
+			popupWebView.topAnchor.constraint(equalTo: container.topAnchor),
+			popupWebView.bottomAnchor.constraint(equalTo: container.bottomAnchor)
+		])
+		view = container
+	}
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		navigationItem.rightBarButtonItem = UIBarButtonItem(
+			barButtonSystemItem: .close,
+			target: self,
+			action: #selector(close)
+		)
+	}
+
+	@objc private func close() {
+		onClose?()
 	}
 }
 

@@ -3,10 +3,10 @@
 //  OAuth2
 //
 //  Decides how the embedded authorize web view treats a navigation.
-//  Epic Hyperspace "Log in with Authenticator" opens a new window (window.open /
-//  target=_blank) or a non-http scheme. The embedded WKWebView has a single frame,
-//  so those navigations must be loaded in place or handed to the system — dismissing
-//  the controller would cancel the OAuth session.
+//  Epic Hyperspace "Log in with Authenticator" opens a second window (window.open /
+//  target=_blank). That window must stay a separate web view: Epic finishes 2FA by
+//  scripting window.opener on the original login page. Loading the popup in the
+//  login page replaces that page and leaves a blank document.
 //
 
 import Foundation
@@ -15,7 +15,9 @@ import Foundation
 enum OAuth2EmbeddedNavigation: Equatable {
 	case intercept
 	case openExternally
-	case loadInCurrentWebView
+	/// `window.open` / `target=_blank`. WebKit loads this in the web view returned from
+	/// `createWebViewWith`. The login page must not navigate to it.
+	case presentPopup
 	case allow
 }
 
@@ -26,7 +28,9 @@ enum OAuth2EmbeddedNavigationPolicy {
 	///   (`window.open`, `target=_blank`).
 	static func decide(url: URL?, targetFrameIsNil: Bool, intercept: URLComponents?) -> OAuth2EmbeddedNavigation {
 		guard let url = url else {
-			return .allow
+			// `window.open()` with no URL yet. The new browsing context has to exist
+			// so the page can set its location afterwards.
+			return targetFrameIsNil ? .presentPopup : .allow
 		}
 		if matchesIntercept(url, intercept: intercept) {
 			return .intercept
@@ -34,8 +38,8 @@ enum OAuth2EmbeddedNavigationPolicy {
 		if shouldOpenExternally(url) {
 			return .openExternally
 		}
-		if targetFrameIsNil && isWebURL(url) {
-			return .loadInCurrentWebView
+		if targetFrameIsNil && shouldPresentAsPopup(url) {
+			return .presentPopup
 		}
 		return .allow
 	}
@@ -58,6 +62,19 @@ enum OAuth2EmbeddedNavigationPolicy {
 			return false
 		}
 		return scheme == "http" || scheme == "https"
+	}
+
+	/// Documents that belong in a second window. `about:blank` is the usual `window.open()` result.
+	static func shouldPresentAsPopup(_ url: URL) -> Bool {
+		if isWebURL(url) {
+			return true
+		}
+		switch url.scheme?.lowercased() {
+		case "about", "blob", "data":
+			return true
+		default:
+			return false
+		}
 	}
 
 	/// Custom URL schemes (authenticator apps). Web and in-page schemes stay in the web view.
